@@ -341,9 +341,6 @@ span {
 .ru {
   margin-right: 20px;
 }
-// .price:hover {
-// color: $hovcolor;
-// }
 .slider {
   appearance: none;
   width: 85%;
@@ -376,9 +373,6 @@ span {
   background: $logo;
   cursor: pointer;
 }
-
-// ну не знаю я как переoпределить стиль bootstrap
-
 .form-check-input {
   border: none !important;
   outline: none !important;
@@ -398,24 +392,18 @@ span {
 .form-check-label {
   margin-top: 2px;
 }
-
-// .spinner {
-//   display: flex;
-//   justify-content: center;
-// }
-.choce-bin {
+.choice-bin {
   display: flex;
   padding: 10px 0 10px 0;
   margin: 30px 0 30px 0;
 }
-.choce-order {
+.choice-order {
   display: flex;
 }
-.product-card-choce {
-  //width: ;
+.product-card-choice {
   overflow: hidden;
 }
-.choce-order-wrap {
+.choice-order-wrap {
   overflow: hidden;
   margin: 0px auto;
   max-width: 1000px;
@@ -423,10 +411,10 @@ span {
   display: flex;
   flex-direction: column;
 }
-.choce-order-wrap:nth-child(odd) {
+.choice-order-wrap:nth-child(odd) {
   background:$gainsboro;
 }
-.choce-order-wrap:nth-child(even) {
+.choice-order-wrap:nth-child(even) {
   background: $bgcolor;
 }
 .product-link {
@@ -659,9 +647,6 @@ a {
   font-weight: 500;
   margin-right: 20px;
 }
-// .delivery {
-//   gap: 10px;
-// }
 .delivery-column {
   display: grid;
   grid-template-columns: 32% 32% 32%;
@@ -674,7 +659,8 @@ a {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   row-gap: 20px;
-  align-items: end;;
+  align-items: end;
+  margin-left: 34px;
 }
 .delivery-column-one,.delivery-column-two,.delivery-column-three {
   background: $searchgray;
@@ -753,7 +739,7 @@ a {
 .self {
   outline: none;
   margin: 0 0 0 24px;
-  width: 200%;
+  width: 100%;
   padding: 0px 0px 0px 10px;
 
   color: $textcolor;
@@ -802,10 +788,9 @@ color: $prcolor;
   margin: 30px 0 30px 0;
 
 }
-
 .preview-min {
   width: 300px;
   height: 354px;
   object-fit: cover;
-  margin-right: 15px;
+  //margin-right: 5px;
 }
