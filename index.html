@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- /Подключение стилей -->
+    <link rel="stylesheet" href="Source/CSS/style.css">
+
+
+    <!-- Подключениe bootstrap local-->
+    <!--  <link rel="stylesheet" href="Source/css custom/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Подключениe bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+
+    <!-- Подключение иконок c сервера-->
+    <!-- <script src="https://kit.fontawesome.com/af5e4e0bea.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+</head>
+
+<body>
+<!--Test-->
+<div class=" wrapper">
+    <header class="header">
+        <!-- LOGO -->
+        <div class="header__container _container">
+            <a href="" class="header__logo">CARPET</a>
+            <!-- <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Layers.svg" alt="cart"></div> -->
+
+            <!-- SEARCH -->
+            <form>
+                <div class="search__container _search">
+                    <input type="text" name="text" class="search" placeholder="Поиск..">
+                    <!-- <form action="#" method="get" enctype="multipart/form-data"></form> -->
+                    <input type="submit" name="submit" class="submit" value="Search">
+                </div>
+            </form>
+            <icon class="header__icon _icon">
+                <ul class="icon__list">
+                    <a href="https://translate.google.com/">
+                        <li class="icon__item">
+                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-a.svg" alt="cart"></div>
+                        </li>
+                    </a>
+                    <input type="text" min="1" max="9" class="numb-min" placeholder="1">
+                    <a href="">
+                        <li class="icon__item">
+                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-b.svg" alt="cart"></div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="icon__item">
+                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-c.svg" alt="account">
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </icon>
+        </div>
+        <!-- NAVIGATION -->
+        <nav class="header__menu _menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="" class="menu__linc linc">Каталог</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc linc">Услуги</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc linc">Доставка</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc">Оплата</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc">Акции</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__linc">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--CARUSEL-1 -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class=""></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"
+                    aria-current="true"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class=""></button>
+        </div>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active carousel-item-start">
+                <img src="Source/img/pexels-max-vakhtbovych-7195534.jpg" alt="" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p>Ковер с треугольным рисунком</p>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item-next carousel-item-start">
+                <img src="Source/img/pexels-max-vakhtbovych-6969866.jpg" alt="" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p>Изысканный полосатый ковер</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Source/img/pexels-max-vakhtbovych-6296925.jpg" alt="" class="d-block" style="width:100%">
+                <div class="carousel-caption">
+                    <h3></h3>
+                    <p> Индийский прямоугольный ковёр</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GRID-CONTAINER -->
+    <div class="grid-container">
+        <div class="grid-container-view">
+            <div class="grid-container-filter">
+                <div class="item">Бренд
+                    <form action="#" method="get" enctype="multipart/form-data"></form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Agnelle
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Bacon
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Christian Louboutin
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Размер
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider">
+                    </div>
+                </div>
+                <div class="item">Форма
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Круг
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Квадрат
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Категория
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Ковры
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Ковровые покрытия
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Материал
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Синтетика
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Шерсть
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Тип ворса
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Прямой
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Скрученный
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Высота ворса
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider">
+                    </div>
+                </div>
+                <!-- <label for="customRange3" class="form-label">Example range</label>
+                  <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3"> -->
+                <div class="item">Страна
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Китай
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Россия
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Цвет
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Красный
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Синий
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">
+                            Голубой
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Зеленый
+                        </label>
+                    </div>
+                </div>
+                <div class="item">Цена
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </div>
+            </div>
+            <!-- thirst column -->
+            <div class="product-card">
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-f.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+
+
+                        <div class="price">9 790</div>
+                        <p class="r">₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/images.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">6 790</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <span>10 590</span>
+                        <p class="ru">₽</p>
+                        <div class="price">9 790</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+            </div>
+            <!-- two column -->
+            <div class="product-card">
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg" alt="carpet"
+                         class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">790</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <span>140 599</span>
+                        <p class="ru">₽</p>
+                        <div class="price">120 790</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">9 290</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+            </div>
+            <!-- thri column -->
+            <div class="product-card">
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/pexels-tatiana-syrikova-3932930.jpg" alt="carpet" class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">7 150</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/russian-carpet-florlyuks-51404-50622-kvadrat-1-410x410.jpg" alt="carpet"
+                         class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">13 400</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+                <div class="product-link">
+                    <!-- <a href="#"></a> -->
+                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">
+                    </div>
+                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>
+                </div>
+                <a href="#">
+                    <img src="/Source/img/belarusian-carpet-alfaprestizh-34192-20-krug-1-410x410.jpg" alt="carpet"
+                         class="block">
+                </a>
+                <div class="product-details">
+                    <div class="product-price">
+                        <div class="price">49 690</div>
+                        <p>₽</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </div>
+    <!-- PAGE 3 -->
+    <!-- NAVIGATION -->
+    <div class="choce-bin">
+        <div class="product-card-choce">
+            <a href="#">
+                <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="full">
+            </a>
+        </div>
+        <div class="about-item">
+            <div>
+                <h5 class="title"> Индийский прямоугольный ковёр</h5>
+            </div>
+            <div class="art-wrap-a">
+                <p class="art-name">Артикул:</p>
+                <p class="art">HL-714-GREY</p>
+            </div>
+            <nav>
+                <div class="tag">
+                    <a href="" class="tag-item">Ковер</a>
+                    <a href="" class="tag-item">Прямой ворс</a>
+                    <a href="" class="tag-item">Короткий ворс</a>
+                    <a href="" class="tag-item">Индия</a>
+                    <a href="" class="tag-item">Шерсть</a>
+                    <a href="" class="tag-item">Ручная работа</a>
+                </div>
+            </nav>
+            <div class="description-goods">
+                <p>Текстурированный ковёр ручной работы из натуральных материалов для ценителей искусства
+                    ковроткачества</p>
+            </div>
+            <div class="main-button">
+                <div class="sum">
+                    <div class="description-sum">Цена:</div>
+                    <div class="description-price">9 790</div>
+                    <p class="description-ru">₽</p>
+                </div>
+
+                <button type="button" class="success">B корзину</button>
+            </div>
+            <!-- <button type="button" class="btn btn-outline-success">Success</button> -->
+        </div>
+    </div>
+</div>
+<!-- PAGE 4 -->
+<div class="choce-order-wrap">
+    <div class="choce-order">
+        <div class="product-card-choce">
+            <a href="#">
+                <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="preview">
+            </a>
+        </div>
+        <div class="about-item">
+            <div>
+                <h5 class="title"> Индийский прямоугольный ковёр</h5>
+            </div>
+            <div class="include">
+                <div class="art-wrap">
+                    <p class="art-name">Артикул:</p>
+                    <p class="art">HL-714-GREY</p>
+                </div>
+                <div class="product-put">
+                    <div class="sum">
+                        <div class="description-sum">Цена:</div>
+                        <div class="description-price">9 000</div>
+                        <p class="description-ru">₽</p>
+                    </div>
+                    <div class="goods">
+                        <div class="quantity-goods">
+                            <input type="button" value="-" class="button-minus">
+                            <input type="text" min="1" max="9" class="numb" placeholder="1">
+                            <input type="button" value="+" class="button-plus">
+                        </div>
+                        <div class="bin"><img class="some-icon" src="/Source/icons/Trash Can.svg" alt="bin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="choce-order-wrap">
+    <div class="choce-order">
+        <div class="product-card-choce">
+            <a href="#">
+                <img src="/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg" alt="carpet"
+                     class="preview">
+            </a>
+        </div>
+        <div class="about-item">
+            <div>
+                <h5 class="title"> Маленкий коврик</h5>
+            </div>
+            <div class="include">
+                <div class="art-wrap">
+                    <p class="art-name">Артикул:</p>
+                    <p class="art">H14-GREY</p>
+                </div>
+                <div class="product-put">
+                    <div class="sum">
+                        <div class="description-sum">Цена:</div>
+                        <div class="description-price">800</div>
+                        <p class="description-ru">₽</p>
+                    </div>
+                    <div class="goods">
+                        <div class="quantity-goods">
+                            <input type="button" value="-" class="button-minus">
+                            <input type="text" min="1" max="9" class="numb" placeholder="1">
+                            <input type="button" value="+" class="button-plus">
+                        </div>
+                        <div class="bin"><img class="some-icon" src="/Source/icons/Trash Can.svg" alt="bin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="choce-order-wrap">
+    <div class="choce-order">
+        <div class="product-card-choce">
+            <a href="#">
+                <img src="/Source/img/pexels-tatiana-syrikova-3932930.jpg" alt="carpet" class="preview">
+            </a>
+        </div>
+        <div class="about-item">
+            <div>
+                <h5 class="title">Белая волчья шкура</h5>
+            </div>
+            <div class="include">
+                <div class="art-wrap">
+                    <p class="art-name">Артикул:</p>
+                    <p class="art">HLY-7914-GREY</p>
+                </div>
+                <div class="product-put">
+                    <div class="sum">
+                        <div class="description-sum">Цена:</div>
+                        <div class="description-price">200 000</div>
+                        <p class="description-ru">₽</p>
+                    </div>
+                    <div class="goods">
+                        <div class="quantity-goods">
+                            <input type="button" value="-" class="button-minus">
+                            <input type="text" min="1" max="9" class="numb" placeholder="1">
+                            <input type="button" value="+" class="button-plus">
+                        </div>
+                        <div class="bin"><img class="some-icon" src="/Source/icons/Trash Can.svg" alt="bin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="choce-order-wrap">
+    <div class="sum-left">
+        <div class="description-row-cont">
+            <div class="description-row">
+                <div class="u">
+                    <p class="conclusion">Всего:</p>
+                    <p>209 800</p>
+                    <p>₽</p>
+                </div>
+            </div>
+            <div class="description-row">
+                <div class="u">
+                    <p class="conclusion">Скидка составила:</p>
+                    <p>- 9 800</p>
+                    <p>₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sum">
+        <div class="description-sum">Итого:</div>
+        <div class="description-price">200 000</div>
+        <p class="description-ru">₽</p>
+        <button type="button" class="success">Оформить доставку</button>
+    </div>
+</div>
+<!-- page 5 -->
+<div class="wrapper">
+    <div class="delivery">
+        <div class="delivery-column">
+
+            <div class="delivery-column-one">
+                <div class="delivery-city">Доставка по России
+                </div>
+
+                <div class="icon">
+                    <img class="some-vector" src="/Source/icons/Vector.svg" alt="car">
+                </div>
+                <div class="product-price">
+                    <div class="price">1 000</div>
+                    <p class="r">₽</p>
+                </div>
+                <div class="floor">Подъем на один этаж 100 ₽</div>
+            </div>
+            <div class="delivery-column-two">
+                <div class="delivery-city">Доставка по Петербургу и Ленинградской области</div>
+                <div class="icon">
+                    <img class="some-vector" src="/Source/icons/Vector-2.svg" alt="car">
+                </div>
+                <div class="product-price">
+                    <div class="price">600</div>
+                    <p class="r">₽</p>
+                </div>
+                <div class="floor">Подъем на один этаж 100 ₽</div>
+            </div>
+            <div class="delivery-column-three">
+                <div class="delivery-city">Самовывоз</div>
+                <div class="icon">
+                    <img class="some-vector" src="/Source/icons/Vector-1.svg" alt="car">
+                </div>
+                <a href="" class="universal-link">Показать на карте</a>
+                <div class="floor">Бесплатно</div>
+            </div>
+        </div>
+    </div>
+    <div class="delivery-row-cont">
+        <div class="delivery-row">
+            <div class="delivery-row-one">Кому:</div>
+            <div class="delivery-row-two">Куда:</div>
+            <div class="delivery-row-three">Этаж:</div>
+            <div class="delivery-row-thour">Телефон:</div>
+            <div class="delivery-row-five">Почта:</div>
+        </div>
+        <div class="delivery-row">
+            <input type="text" class="name">
+            <input type="text" class="name">
+            <input type="text" class="name">
+            <input type="text" class="name">
+            <input type="text" class="name" placeholder="email@.com">
+        </div>
+        <div class="about-us">
+            <div class="about-b">Мы находимся:</div>
+            <div class="about">Москва, ул. Петровскaя 148, оф. 34</div>
+            <div class="about-b">Телефон для связи:</div>
+            <div class="about">8 904 631 04 95</div>
+            <!-- <div class="about-b">Заказать звонок</div>
+            <div class="about">8 951 635 04 47</div> -->
+        </div>
+    </div>
+    <div class="sum">
+        <div class="description-sum">Стоимость доставки:</div>
+        <div class="description-price">700</div>
+        <p class="description-ru">₽</p>
+        <button type="button" class="success">Перейти к оплате</button>
+    </div>
+    <!-- page 6 -->
+    <div class="delivery-where">
+        <div class="product-card-choce">
+            <a href="#">
+                <img src="/Source/img/pexels-tatiana-syrikova-3932930.jpg" alt="carpet" class="preview-min">
+            </a>
+    </div>
+    <div class="delivery-row-cont">
+        <div class="delivery-row">
+            <div class="delivery-row-ziro">Название:</div>
+            <div class="delivery-row-ziro">Артикул:</div>
+            <div class="delivery-row-one">Покупатель:</div>
+            <div class="delivery-row-two">Адрес доставки:</div>
+            <div class="delivery-row-three">Этаж:</div>
+            <div class="delivery-row-thour">Вес:</div>
+            <div class="delivery-row-five">Телефон:</div>
+            <div class="delivery-row-six">Почта:</div>
+        </div>
+        <div class="delivery-inform">
+            <div class="self">Ковер с квадратами</div>
+            <div class="self">HLY-7914-GREY</div>
+            <div class="self">Залихватский Станислав Константинович</div>
+            <div class="self">Ленинский проспект пр-т 22, д. 13</div>
+            <div class="self">6</div>
+            <div class="self">9 кг</div>
+            <div class="self">8 989 631 04 16</div>
+            <div class="self">181419</div>
+        </div>
+    </div>
+
+</div>
+<!-- </div> -->
+<!-- </div> -->
+
+
+<div class="sum">
+    <div class="description-sum">Итого:</div>
+    <div class="description-price">119 790</div>
+    <p class="description-ru">₽</p>
+    <button type="button" class="success">Оплатить</button>
+</div>
+
+</div>
+<!-- FOOTERS ICONS -->
+<div class="footer__icons">
+    <ul class="icon__social-list">
+        <li class="icon__social-item">
+            <div class="jack"><img class="social-media-first" src="/Source/icons/icons8-facebook 1.svg" alt="facebook">
+            </div>
+        </li>
+        <li class="icon__social-item">
+            <div class="jack"><img class="social-media-second" src="/Source/icons/icons8-instagram 1.svg"
+                                   alt="instagram">
+            </div>
+        </li>
+        <li class="icon__social-item">
+            <div class="jack"><img class="social-media-first" src="/Source/icons/icons8-twitter 1.svg" alt="twitter">
+            </div>
+        </li>
+        <li class="icon__social-item">
+            <div class="jack"><img class="social-media-fird" src="/Source/icons/icons8-tiktok.svg" alt="tiktok"></div>
+        </li>
+    </ul>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__row">
+            <div class="footer__text">2021-2022&copy;CARPET Интернет-магазин ковров</div>
+        </div>
+    </footer>
+</div>
+
+<script src="Source/js custom/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
