@@ -780,6 +780,10 @@ color: $prcolor;
   //margin-right: 5px;
 }
 
+.card-selected {
+  background-color: $green;
+}
+
 @media (max-width: 922px) {
   .delivery-column {
     background-color: blue;
