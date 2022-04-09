@@ -43,7 +43,6 @@ $fontsize: 18px;
 // .form-check-input:focus, 
 // .form-check-input:checked {
 //   outline: none !important;
-  
 // }
 a {
   text-decoration: none;
@@ -73,13 +72,16 @@ body {
   overflow: hidden;
   min-height: 100%;
   margin: 0 auto;
-  max-width: 1000px;
-  
-  padding: 15px 30px 15px 30px;
   background-color: $bgcolor;
   display: flex;
   flex-direction: column;
+  max-width: 1000px;
+  padding: 15px 30px 15px 30px;
 }
+//.container {
+//  max-width: 1000px;
+//  //padding: 15px 30px 15px 30px;
+//}
 
 .header {
   width: 100%;
@@ -776,4 +778,16 @@ color: $prcolor;
   height: 355px;
   object-fit: cover;
   //margin-right: 5px;
+}
+
+@media (max-width: 922px) {
+  .delivery-column {
+    background-color: blue;
+    //max-width: 750px;
+  }
+}
+@media (max-width: 600px) {
+  .delivery-column {
+    max-width: 470px;
+  }
 }

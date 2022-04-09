@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    maximum-scale=1.0, user-scalable=0">
     <title>Document</title>
 
     <!-- /Подключение стилей -->
@@ -36,68 +37,74 @@
 <body>
 <!--Test-->
 <div class=" wrapper">
-    <header class="header">
-        <!-- LOGO -->
-        <div class="header__container _container">
-            <a href="" class="header__logo">CARPET</a>
-            <!-- <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Layers.svg" alt="cart"></div> -->
-            <!-- SEARCH -->
-            <form>
-                <div class="search__container _search">
-                    <input type="text" name="text" class="search" placeholder="Поиск..">
-                    <!-- <form action="#" method="get" enctype="multipart/form-data"></form> -->
-                    <input type="submit" name="submit" class="submit" value="Search">
-                </div>
-            </form>
-            <icon class="header__icon _icon">
-                <ul class="icon__list">
-                    <a href="https://translate.google.com/">
-                        <li class="icon__item">
-                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-a.svg" alt="cart"></div>
-                        </li>
-                    </a>
-                    <input type="text" min="1" max="9" class="numb-min" placeholder="1">
-                    <a href="">
-                        <li class="icon__item">
-                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-b.svg" alt="cart"></div>
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="icon__item">
-                            <div class="icon"><img class="some-icon" src="/Source/icons/Vector-c.svg" alt="account">
-                            </div>
-                        </li>
-                    </a>
+    <div class="container">
+        <header class="header">
+            <div class="container"></div>
+
+            <!-- LOGO -->
+            <div class="header__container _container">
+                <a href="" class="header__logo">CARPET</a>
+                <!-- <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Layers.svg" alt="cart"></div> -->
+                <!-- SEARCH -->
+                <form>
+                    <div class="search__container _search">
+                        <input type="text" name="text" class="search" placeholder="Поиск..">
+                        <!-- <form action="#" method="get" enctype="multipart/form-data"></form> -->
+                        <input type="submit" name="submit" class="submit" value="Search">
+                    </div>
+                </form>
+                <icon class="header__icon _icon">
+                    <ul class="icon__list">
+                        <a href="https://translate.google.com/">
+                            <li class="icon__item">
+                                <div class="icon"><img class="some-icon" src="/Source/icons/Vector-a.svg" alt="cart">
+                                </div>
+                            </li>
+                        </a>
+                        <input type="text" min="1" max="9" class="numb-min" placeholder="1">
+                        <a href="">
+                            <li class="icon__item">
+                                <div class="icon"><img class="some-icon" src="/Source/icons/Vector-b.svg" alt="cart">
+                                </div>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="icon__item">
+                                <div class="icon"><img class="some-icon" src="/Source/icons/Vector-c.svg" alt="account">
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </icon>
+            </div>
+            <!-- NAVIGATION -->
+            <nav class="header__menu _menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="" class="menu__linc linc">Каталог</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc linc">Услуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc linc">Доставка</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc">Оплата</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc">Отзывы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc">Акции</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__linc">Контакты</a>
+                    </li>
                 </ul>
-            </icon>
-        </div>
-        <!-- NAVIGATION -->
-        <nav class="header__menu _menu">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a href="" class="menu__linc linc">Каталог</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc linc">Услуги</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc linc">Доставка</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc">Оплата</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc">Отзывы</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc">Акции</a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__linc">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            </nav>
+        </header>
+    </div>
     <!--CAROUSEL-1 -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators/dots -->
@@ -132,7 +139,7 @@
             </div>
         </div>
     </div>
-<!--PAGE 2-->
+    <!--PAGE 2-->
     <!-- GRID-CONTAINER -->
     <div class="grid-container">
         <div class="grid-container-view">
