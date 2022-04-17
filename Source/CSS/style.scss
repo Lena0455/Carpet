@@ -3,6 +3,7 @@
 // $logo: #ff7b00;
 $link: #ff7b00;
 $logo-light:#8b66b6;
+$logo-pur: #ded3f1;
 $logo: #7954a3;
 $logo-darck: #6d518d;
 $hovlogo: #ff7b0080;
@@ -287,7 +288,16 @@ align-items: center;
   color: $hovcolor;
 }
 .product-card {
-  overflow: hidden; 
+  overflow: hidden;
+
+}
+.product-color {
+  background-color: $prcolor;
+  //opacity: 0.2;
+  border-radius: 0 0 6px 6px ;
+  margin-bottom: 20px;
+  background-color: $logo-pur;
+
 }
 .item {
   // font-size: 18px;
@@ -301,12 +311,14 @@ align-items: center;
 .grid-container-view > div {
   text-align: center;
   font-size: 16px;
-  border-radius: 6px;
+  //border-radius: 6px;
   cursor: pointer;
 }
 .product-price {
   display: flex;
   justify-content: center;
+  align-items: center;
+
 }
 .product-link {
 position: relative;
@@ -322,16 +334,19 @@ right: 12px;
   right: 12px;
 }
 span {
-  color: $textcolor;
+  color: $hovcolor;
   text-decoration: line-through $link;
   padding: 0 2px 0 2px;
 }
 .price {
-  color: $textcolor;
-  padding: 0 2px 0 2px;
+  color: $hovcolor;
+  padding: 8px 2px 8px 2px;
 }
 .ru {
   margin-right: 20px;
+}
+.r {
+  padding: 8px 2px 8px 2px;
 }
 .slider {
   appearance: none;
@@ -349,13 +364,15 @@ span {
 .block {
   width: 200px;
   height: 330px;
-  padding-bottom: 6px;
+  //padding-bottom: 6px;
   padding-top: 30px;
   object-fit: cover;
+
 }
-.block:hover::before {
-  animation: shine .75s;
-}
+//.block:hover::before {
+//  animation: shine .75s;
+//}
+
 .slider::-webkit-slider-thumb {
   appearance: none;
   width: 22px;
@@ -677,9 +694,10 @@ a {
   margin: 20px 20px 10px 20px;
   height: 50px;
 }
-//.r {
-//  margin-right: none;
-//}
+.r {
+  padding: 10px 2px 10px 2px;
+  //margin-right: none;
+}
 .floor {
   font-size: 12px;
   margin: 5px 0 20px 0;
