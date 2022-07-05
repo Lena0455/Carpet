@@ -319,6 +319,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
 
+
 }
 .product-link {
 position: relative;
@@ -335,10 +336,13 @@ right: 12px;
 }
 span {
   color: $hovcolor;
-  text-decoration: line-through $link;
-  padding: 0 2px 0 2px;
+  padding: 0 2px 0 5px;
 }
-.price {
+span-decoration {
+  text-decoration: line-through $link;
+}
+
+.price-delivery {
   color: $hovcolor;
   padding: 8px 2px 8px 2px;
 }
@@ -348,8 +352,14 @@ price-white{
   padding: 8px 2px 8px 2px;
 }
 .rub {
+  padding: 8px 2px 8px 2px;
+
+//при появлении скидки
+}.rub-discount {
   margin-right: 20px;
 }
+
+
 .ruble-symbol {
   padding: 8px 2px 8px 2px;
 }
@@ -548,10 +558,12 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.description-ru {
-  margin-right: 10px;
+
+.description-price,  {
+  font-weight: 600;
+  padding: 0 2px 0 5px;
 }
-.description-price, 
+
 .description-ru {
   font-weight: 600;
 }
@@ -697,25 +709,29 @@ a {
 }
 .delivery-city {
   margin: 24px 20px 10px 20px;
-  height: 50px;
+  height: 40px;
 
 }
-.delivery-white {
-   color: $prcolor;
-}
-
-
-.r {
+/*.r {
   padding: 10px 2px 10px 2px;
   //margin-right: none;
-}
+}*/
 .floor {
   font-size: 12px;
   margin: 5px 0 20px 0;
 }
+.floor-free {
+  font-size: 16px;
+  margin: 13px 0 12px 0;
+}
 .some-vector {
   width: 60px;
   height: 40px;
+}
+
+.delivery-white {
+  filter: brightness(10);
+
 }
 .some-vector:hover {
   transform: scale(1.1);
@@ -729,9 +745,12 @@ a {
   font-weight: 500;
   color: $logo;
   text-decoration: none;
-  margin: 5px 0 20px 0;
+  padding: 8px 0 ;
 
 }
+/*universal-link-iverte {
+color: $prcolor;
+}*/
 
 .universal-link:link {
   color: $logo;
@@ -814,11 +833,37 @@ color: $prcolor;
 
 .card-selected {
   background-color: $logo;
+  color: $prcolor;
+  //filter: hue-rotate(1);
+  //filter: invert(70%);
+
 }
 
-.card-selectedDelivery {
-  background-color: $green;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//.card-selectedDelivery {
+//  background-color: $green;
+//}
 
 /*
 @media (max-width: 922px) {

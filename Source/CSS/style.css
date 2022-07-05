@@ -320,11 +320,14 @@ body {
 
 span {
   color: #212529;
-  text-decoration: line-through #ff7b00;
-  padding: 0 2px 0 2px;
+  padding: 0 2px 0 5px;
 }
 
-.price {
+span-decoration {
+  text-decoration: line-through #ff7b00;
+}
+
+.price-delivery {
   color: #212529;
   padding: 8px 2px 8px 2px;
 }
@@ -335,6 +338,10 @@ price-white {
 }
 
 .rub {
+  padding: 8px 2px 8px 2px;
+}
+
+.rub-discount {
   margin-right: 20px;
 }
 
@@ -564,11 +571,11 @@ a {
   justify-content: space-between;
 }
 
-.description-ru {
-  margin-right: 10px;
+.description-price {
+  font-weight: 600;
+  padding: 0 2px 0 5px;
 }
 
-.description-price,
 .description-ru {
   font-weight: 600;
 }
@@ -731,25 +738,30 @@ a {
 
 .delivery-city {
   margin: 24px 20px 10px 20px;
-  height: 50px;
+  height: 40px;
 }
 
-.delivery-white {
-  color: #ffffff;
-}
-
-.r {
+/*.r {
   padding: 10px 2px 10px 2px;
-}
-
+  //margin-right: none;
+}*/
 .floor {
   font-size: 12px;
   margin: 5px 0 20px 0;
 }
 
+.floor-free {
+  font-size: 16px;
+  margin: 13px 0 12px 0;
+}
+
 .some-vector {
   width: 60px;
   height: 40px;
+}
+
+.delivery-white {
+  filter: brightness(10);
 }
 
 .some-vector:hover {
@@ -766,9 +778,12 @@ a {
   font-weight: 500;
   color: #7954a3;
   text-decoration: none;
-  margin: 5px 0 20px 0;
+  padding: 8px 0;
 }
 
+/*universal-link-iverte {
+color: $prcolor;
+}*/
 .universal-link:link {
   color: #7954a3;
 }
@@ -846,10 +861,7 @@ a {
 
 .card-selected {
   background-color: #7954a3;
-}
-
-.card-selectedDelivery {
-  background-color: #198754;
+  color: #ffffff;
 }
 
 /*

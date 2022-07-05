@@ -1,8 +1,8 @@
-// const e = document.querySelector()
-const e = document.querySelectorAll(".delivery-column > div")
-console.log(e)
+// const inverseDelivery = document.querySelector()
+const inverseDelivery = document.querySelectorAll(".delivery-column > div")
+console.log(inverseDelivery)
 
-e.forEach((el) => {
+inverseDelivery.forEach((el) => {
     el.addEventListener("click", (event) => {
         event.currentTarget.classList.toggle("card-selected")
         //classList.toggle //метод-переключатель - у элемента будет то добавляться, то убираться класс
@@ -11,23 +11,21 @@ e.forEach((el) => {
         event.stopPropagation()
     })
 })
-//не вижу аргумент для параметера функции
 
-
-const inverseDelivery = document.querySelectorAll('.delivery-column > div')
-console.log(inverseDelivery);
+const inverseDeliveryIcon = document.querySelectorAll('.some-vector')
+console.log(inverseDeliveryIcon);
 
 // array1.forEach(element => console.log(element));
-// inverseDelivery.forEach(el => console.log(el));
+// inverseDeliveryIcon.forEach(el => console.log(el));
 
 // forEach(callbackFn)
-inverseDelivery.forEach((elementInverse) => {
+inverseDeliveryIcon.forEach((elementInverse) => {
     elementInverse.addEventListener('click', (event) => {
         event.currentTarget.classList.toggle('delivery-white')
-        // event.stopPropagation()
+        event.stopPropagation()
     })
-
 })
+
 
 
 /*function toggle(el, classname) {
