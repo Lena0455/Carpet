@@ -358,8 +358,6 @@ price-white{
 }.rub-discount {
   margin-right: 20px;
 }
-
-
 .ruble-symbol {
   padding: 8px 2px 8px 2px;
 }
@@ -558,6 +556,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.price:nth-child(3)  {
+margin-left: 5px;
+}
 
 .description-price,  {
   font-weight: 600;
@@ -728,11 +729,11 @@ a {
   width: 60px;
   height: 40px;
 }
-
+//изменение цвета иконок доставки
 .delivery-white {
   filter: brightness(10);
-
 }
+
 .some-vector:hover {
   transform: scale(1.1);
 }
@@ -761,6 +762,7 @@ color: $prcolor;
 // .universal-link:active {
 // color: #e9ecef;
 // }
+
 .universal-link:hover {
   text-decoration: none;
   color: $hovcolor;
@@ -837,6 +839,14 @@ color: $prcolor;
   //filter: hue-rotate(1);
   //filter: invert(70%);
 
+}
+
+.card-selected > p.some-class:last-child > #test {
+
+}
+
+.card-selected img {
+  filter: brightness(10);
 }
 
 

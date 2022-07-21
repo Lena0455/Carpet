@@ -571,6 +571,10 @@ a {
   justify-content: space-between;
 }
 
+.price:nth-child(3) {
+  margin-left: 5px;
+}
+
 .description-price {
   font-weight: 600;
   padding: 0 2px 0 5px;
@@ -862,6 +866,10 @@ color: $prcolor;
 .card-selected {
   background-color: #7954a3;
   color: #ffffff;
+}
+
+.card-selected img {
+  filter: brightness(10);
 }
 
 /*

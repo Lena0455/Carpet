@@ -27,6 +27,50 @@ inverseDeliveryIcon.forEach((elementInverse) => {
 })
 
 
+const cardOfCarpet = document.createElement('cards')
+
+cardOfCarpet.innerHTML = '<div class="product-link">\n' +
+    '                    <!-- <a href="#"></a> -->\n' +
+    '                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-f.svg"\n' +
+    '                                                     alt="cart">\n' +
+    '                    </div>\n' +
+    '                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart">\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '                    <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="block">\n' +
+    '                <div class="product-color">\n' +
+    '                    <div class="product-details">\n' +
+    '                        <div class="product-price">\n' +
+    '                            <div class="price">9 790</div>\n' +
+    '                            <p class="rub">₽</p>\n' +
+    '                        </div>\n' +
+    '                    </div>\n' +
+    '                </div>\n' +
+    '                <div class="product-link">\n' +
+    '                    <!-- <a href="#"></a> -->\n' +
+    '                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">\n' +
+    '                    </div>\n' +
+    '                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>\n' +
+    '                </div>\n' +
+    '                <img src="/Source/img/images.jpg" alt="carpet" class="block">\n' +
+    '                <div class="product-color">\n' +
+    '                    <div class="product-details">\n' +
+    '                        <div class="product-price">\n' +
+    '                            <div class="price">6 790</div>\n' +
+    '                            <p class="rub">₽</p>\n' +
+    '                        </div>\n' +
+    '                    </div>\n' +
+    '                </div>';
+
+
+cardOfCarpet.insertAdjacentHTML(
+    "afterbegin",
+    `textiii`
+);
+
+// cardOfCarpet.appendChild()
+console.log(cardOfCarpet);
+
 
 /*function toggle(el, classname) {
     if (el.classList.contains(classname)) {
