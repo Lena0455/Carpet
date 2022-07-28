@@ -1,3 +1,5 @@
+   console.log(document.documentElement)
+
 // const inverseDelivery = document.querySelector()
 const inverseDelivery = document.querySelectorAll(".delivery-column > div")
 console.log(inverseDelivery)
@@ -26,50 +28,70 @@ inverseDeliveryIcon.forEach((elementInverse) => {
     })
 })
 
+// Рендер карточек
 
-const cardOfCarpet = document.createElement('cards')
+const carpetItems = [
+    {
+        image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
+        'favorites': "/Source/icons/Vector-f.svg",
+        'cart': "/Source/icons/Vector-5.svg",
+        'price': '9 790',
+    },
+    {
+        image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
+        'favorites': "/Source/icons/Vector-f.svg",
+        'cart': "/Source/icons/Vector-5.svg",
+        'price': '9 790',
+    },
+    {
+        image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+        'favorites': "/Source/icons/Vector-f.svg",
+        'cart': "/Source/icons/Vector-5.svg",
+        'price': '9 790',
+    },
+]
 
-cardOfCarpet.innerHTML = '<div class="product-link">\n' +
-    '                    <!-- <a href="#"></a> -->\n' +
-    '                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-f.svg"\n' +
-    '                                                     alt="cart">\n' +
-    '                    </div>\n' +
-    '                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart">\n' +
-    '                    </div>\n' +
-    '                </div>\n' +
-    '                    <img src="/Source/img/pexels-max-vakhtbovych-7018250.jpg" alt="carpet" class="block">\n' +
-    '                <div class="product-color">\n' +
-    '                    <div class="product-details">\n' +
-    '                        <div class="product-price">\n' +
-    '                            <div class="price">9 790</div>\n' +
-    '                            <p class="rub">₽</p>\n' +
-    '                        </div>\n' +
-    '                    </div>\n' +
-    '                </div>\n' +
-    '                <div class="product-link">\n' +
-    '                    <!-- <a href="#"></a> -->\n' +
-    '                    <div class="icon-favorites"><img class="some-icon" src="/Source/icons/Vector-4.svg" alt="cart">\n' +
-    '                    </div>\n' +
-    '                    <div class="icon-cart"><img class="some-icon" src="/Source/icons/Vector-5.svg" alt="cart"></div>\n' +
-    '                </div>\n' +
-    '                <img src="/Source/img/images.jpg" alt="carpet" class="block">\n' +
-    '                <div class="product-color">\n' +
-    '                    <div class="product-details">\n' +
-    '                        <div class="product-price">\n' +
-    '                            <div class="price">6 790</div>\n' +
-    '                            <p class="rub">₽</p>\n' +
-    '                        </div>\n' +
-    '                    </div>\n' +
-    '                </div>';
+const carpetsGetEl = document.querySelectorAll('.product-card')
+console.log(carpetsGetEl);
+
+    renderCarpets(carpetsGetEl, carpetItems)
+
+function renderCarpets(el, items) {
+    items.forEach((item) => {
+        const cardCarpet = createCarpetHTMLElement(item);
+        document.body.append(cardCarpet);
+        console.log(cardCarpet)
+        console.log(typeof cardCarpet)
+    })
+
+}
+
+function createCarpetHTMLElement(item) {
+    const carpetCreateDiv = document.createElement('div')
+
+             console.log(carpetCreateDiv)
+    
+    const {favorites, cart, price, sale} = item
+    //     const image = item.image;
+
+   //  carpetCreateDiv.innerHTML = `<img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">`
+
+    carpetCreateDiv.innerHTML = `
+      <div src="${favorites}"/div>
+      <div src="${cart}"/div>
+      <div>${price}</div>
+      <span-decoration>${sale}</span-decoration>
+    `
+
+    return carpetCreateDiv;
+
+}
 
 
-cardOfCarpet.insertAdjacentHTML(
-    "afterbegin",
-    `textiii`
-);
+       // createCarpetHTMLElement.style.width;
+       // createCarpetHTMLElement.style.high;
+       // createCarpetHTMLElement.classList.block;
 
-// cardOfCarpet.appendChild()
-console.log(cardOfCarpet);
 
 
 /*function toggle(el, classname) {

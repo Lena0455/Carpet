@@ -291,6 +291,7 @@ align-items: center;
   overflow: hidden;
 
 }
+
 .product-color {
   background-color: $prcolor;
   //opacity: 0.2;
@@ -324,12 +325,12 @@ align-items: center;
 .product-link {
 position: relative;
 }
-.icon-favorites {
+.favorites {
 position: absolute;
 top: 40px;
 right: 12px;
 }
-.icon-cart {
+.cart {
   position: absolute;
   top: 290px;
   right: 12px;
