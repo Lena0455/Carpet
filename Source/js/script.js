@@ -33,54 +33,67 @@ inverseDeliveryIcon.forEach((elementInverse) => {
 const carpetItems = [
     {
         image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
-        'favorites': "/Source/icons/Vector-f.svg",
-        'cart': "/Source/icons/Vector-5.svg",
-        'price': '9 790',
+        price: 9790,
+        sale: true,
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-        'favorites': "/Source/icons/Vector-f.svg",
-        'cart': "/Source/icons/Vector-5.svg",
-        'price': '9 790',
+        price: 9790,
+        sale: false,
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
-        'favorites': "/Source/icons/Vector-f.svg",
-        'cart': "/Source/icons/Vector-5.svg",
-        'price': '9 790',
+        price: 9790,
+        sale: true,
     },
 ]
 
-const carpetsGetEl = document.querySelectorAll('.product-card')
+const favoritesIcon = "/Source/icons/Vector-f.svg"
+const cartIcon = "/Source/icons/Vector-5.svg" 
+
+// const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
+
+// function renderCarpets(el, items) {
+//     items.forEach((item, i) => {
+//         const carpetCard = createCarpetHTMLElement(item);
+//         const col = i % 3;
+//         el[col].appendChild(carpetCard);
+//     })
+
+// }
+
+
+// const carpetsGetEl = document.querySelector('.product-card'); // returns an HTMLElement
+const carpetsGetEl = document.getElementById('card-container');
 console.log(carpetsGetEl);
 
-    renderCarpets(carpetsGetEl, carpetItems)
+renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
-        const cardCarpet = createCarpetHTMLElement(item);
-        document.body.append(cardCarpet);
-        console.log(cardCarpet)
-        console.log(typeof cardCarpet)
+        const carpetCard = createCarpetHTMLElement(item);
+        el.appendChild(carpetCard);
     })
 
 }
 
 function createCarpetHTMLElement(item) {
-    const carpetCreateDiv = document.createElement('div')
+    const carpetCreateDiv = document.createElement('div');
 
-             console.log(carpetCreateDiv)
-    
-    const {favorites, cart, price, sale} = item
+    console.log(carpetCreateDiv);
+
+    const {price, sale, image} = item
     //     const image = item.image;
 
    //  carpetCreateDiv.innerHTML = `<img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">`
 
+
     carpetCreateDiv.innerHTML = `
-      <div src="${favorites}"/div>
-      <div src="${cart}"/div>
-      <div>${price}</div>
-      <span-decoration>${sale}</span-decoration>
+        <div src="${favoritesIcon}"/div>
+        <div src="${cartIcon}"/div>
+        <div>${price}</div>
+        <span-decoration>${sale}</span-decoration>
+        <img src="${image}" alt="carpet" class="block"/>
     `
 
     return carpetCreateDiv;
