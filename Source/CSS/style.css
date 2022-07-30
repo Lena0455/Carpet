@@ -194,7 +194,6 @@ body {
 }
 
 .some-icon {
-  width: 24px;
   height: 24px;
 }
 
@@ -246,15 +245,15 @@ body {
   font-size: 11px;
 }
 
-.grid-container > .grid-container-filter, .grid-container-view {
+.container-global > .grid-container-filter, .grid-container-global {
   display: grid;
 }
 
-.grid-container-view > .grid-container-filter {
+.grid-container-global > .grid-container-filter {
   font-size: 16px;
 }
 
-.grid-container {
+.container-global {
   padding: 10px 0 10px 0;
   margin: 30px 0 30px 0;
 }
@@ -269,31 +268,44 @@ body {
   color: #212529;
 }
 
-.product-card {
-  overflow: hidden;
-}
-
-.product-color {
-  background-color: #ffffff;
+.product-details {
   border-radius: 0 0 6px 6px;
-  margin-bottom: 20px;
   background-color: #ded3f1;
 }
 
 .item {
   color: #495057;
-  grid-template-columns: auto auto auto;
 }
 
-.grid-container-view {
-  grid-template-columns: 31% 21% 21% 21%;
-  column-gap: 2%;
+.grid-container-global {
+  grid-template-columns: 24% auto;
+  grid-template-rows: auto;
+  column-gap: 6%;
 }
 
-.grid-container-view > div {
+.grid-container-global > div {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+}
+
+.grid-container-card {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 30px;
+}
+
+.grid-container-card > div {
+  text-align: center;
+  font-size: 14px;
+}
+
+.block {
+  width: 200px;
+  height: 330px;
+  object-fit: cover;
+  display: block;
 }
 
 .product-price {
@@ -302,20 +314,24 @@ body {
   align-items: center;
 }
 
-.product-link {
+.icon-positions {
   position: relative;
 }
 
 .favorites {
   position: absolute;
-  top: 40px;
-  right: 12px;
+  top: 0px;
+  margin-top: 10px;
+  right: 0px;
+  margin-right: 10px;
 }
 
 .cart {
   position: absolute;
-  top: 290px;
-  right: 12px;
+  bottom: 0px;
+  margin-bottom: 47px;
+  right: 0px;
+  margin-right: 10px;
 }
 
 span {
@@ -361,13 +377,6 @@ price-white {
 
 .item {
   padding: 0 0 12px 0;
-}
-
-.block {
-  width: 200px;
-  height: 330px;
-  padding-top: 30px;
-  object-fit: cover;
 }
 
 .slider::-webkit-slider-thumb {
