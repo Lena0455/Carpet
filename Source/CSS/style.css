@@ -278,22 +278,24 @@ body {
 }
 
 .grid-container-global {
-  grid-template-columns: 24% auto;
-  grid-template-rows: auto;
-  column-gap: 6%;
+  grid-template-columns: 28% 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 3%;
 }
 
 .grid-container-global > div {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+  display: grid;
 }
 
 .grid-container-card {
-  display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  grid-gap: 30px;
+  grid-template-rows: 1fr;
+  row-gap: 30px;
+  column-gap: 20px;
+  justify-items: center;
 }
 
 .grid-container-card > div {

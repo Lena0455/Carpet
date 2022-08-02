@@ -1,6 +1,6 @@
-   console.log(document.documentElement)
+console.log(document.documentElement)
 
-// const inverseDelivery = document.querySelector()
+// const inverseDelivery = document.querySelector('.')
 const inverseDelivery = document.querySelectorAll(".delivery-column > div")
 console.log(inverseDelivery)
 
@@ -38,18 +38,48 @@ const carpetItems = [
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-        price: 9790,
+        price: 8790,
         sale: false,
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
-        price: 9790,
+        price: 17790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+        price: 117790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
+        price: 790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+        price: 117790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
+        price: 790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+        price: 117790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
+        price: 790,
         sale: true,
     },
 ]
 
 const favoritesIcon = "/Source/icons/Vector-f.svg"
-const cartIcon = "/Source/icons/Vector-5.svg" 
+const cartIcon = "/Source/icons/Vector-5.svg"
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
 
@@ -85,27 +115,56 @@ function createCarpetHTMLElement(item) {
     const {price, sale, image} = item
     //     const image = item.image;
 
-   //  carpetCreateDiv.innerHTML = `<img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">`
+    //  carpetCreateDiv.innerHTML = `<img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">`
 
 
     carpetCreateDiv.innerHTML = `
-        <div src="${favoritesIcon}"/div>
-        <div src="${cartIcon}"/div>
-        <div>${price}</div>
-        <span-decoration>${sale}</span-decoration>
+ <div id="card-container" class="grid-container-card">
+ <div>
+   <div class="icon-positions">
+        <div class="favorites"><img class="some-icon" src="${favoritesIcon}" alt="cart"</div> 
+        <div class="cart"><img class="some-icon" src="${cartIcon}" alt="cart"</div> 
         <img src="${image}" alt="carpet" class="block"/>
+        
+        <div class="product-details">
+          <div class="product-price">
+            <span-decoration>${sale}</span-decoration>
+            <span-decoration>
+              <p class="rub">₽</p>
+            </span-decoration>
+            <div class="price">${price}</div>
+            <p class="rub">₽</p>
+          </div>
+        </div>
+        </div>
+   </div>
+</div>
     `
 
     return carpetCreateDiv;
 
 }
 
+/*   const elViolet = document.querySelector('#violet')
+   console.log(elViolet.classList)
+   elViolet.classList.add('product-details')*/
 
-       // createCarpetHTMLElement.style.width;
-       // createCarpetHTMLElement.style.high;
-       // createCarpetHTMLElement.classList.block;
+
+// const elViolet = document.getElementById('violet')
+// const createColorDiv = document.createElement('div');
 
 
+// elViolet.classList.add('product-details')
+// elViolet.setAttribute("class", 'violet');
+
+//
+// createColorDiv.innerHTML = `
+// <div id = "${elViolet}" className = "product-price" / div>
+//    `
+
+// document.documentElement.style.setProperty('product-price', '#DED3F1FF');
+// console.log(elViolet)
+// console.log(createColorDiv)
 
 /*function toggle(el, classname) {
     if (el.classList.contains(classname)) {
