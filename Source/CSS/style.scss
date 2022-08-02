@@ -226,11 +226,11 @@ align-items: center;
   padding-left: 0;
   margin-bottom: 0;
 }
-.some-icon {
+.icon {
   //width: 24px;
   height: 24px;
 }
-.some-icon:hover {
+.icon:hover {
   transform: scale(1.1);
 }
 .footer__icons {
@@ -299,7 +299,7 @@ align-items: center;
 //внешнии гриды (2)
 .grid-container-global {
   grid-template-columns: 28% 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto;
   column-gap: 3%;
 }
 .grid-container-global > div {
@@ -342,24 +342,32 @@ grid-template-rows: 1fr; //наследник
   justify-content: center;
   align-items: center;
 }
-.icon-positions {
-position: relative;
+.icon-positions-favorites {
+  position: relative;
+
+}
+.icon-positions-cart {
+  position: relative;
 
 }
 // иконки
+.icon-img {
+  //width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 .favorites {
 position: absolute;
-top: 0px;
-  margin-top: 10px;
-right: 0px;
-  margin-right: 10px;
+  top: -330px;
+  right: 0px;
 }
 .cart {
   position: absolute;
   bottom: 0px;
-  margin-bottom: 47px;
   right: 0px;
-  margin-right: 10px;
+
 }
 span {
   color: $hovcolor;

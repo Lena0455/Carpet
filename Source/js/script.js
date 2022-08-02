@@ -115,30 +115,28 @@ function createCarpetHTMLElement(item) {
     const {price, sale, image} = item
     //     const image = item.image;
 
-    //  carpetCreateDiv.innerHTML = `<img src="/Source/img/pexels-max-vakhtbovych-6890403.jpg" alt="carpet" class="block">`
-
-
     carpetCreateDiv.innerHTML = `
- <div id="card-container" class="grid-container-card">
- <div>
-   <div class="icon-positions">
-        <div class="favorites"><img class="some-icon" src="${favoritesIcon}" alt="cart"</div> 
-        <div class="cart"><img class="some-icon" src="${cartIcon}" alt="cart"</div> 
+   <div id="card-container" class="grid-container-card">
+
         <img src="${image}" alt="carpet" class="block"/>
+           <div class="icon-positions-favorites">
+             <div class="favorites"><img class="icon-img" src="${favoritesIcon}" alt="cart"</div> </div>
+             <div class="icon-positions-cart">
+             <div class="cart"><img class="icon-img" src="${cartIcon}" alt="cart"</div>
+           </div>
+        </div>
         
         <div class="product-details">
           <div class="product-price">
             <span-decoration>${sale}</span-decoration>
-            <span-decoration>
-              <p class="rub">₽</p>
-            </span-decoration>
+               <span-decoration>
+                 <p class="rub">₽</p>
+               </span-decoration>
             <div class="price">${price}</div>
             <p class="rub">₽</p>
           </div>
         </div>
-        </div>
    </div>
-</div>
     `
 
     return carpetCreateDiv;

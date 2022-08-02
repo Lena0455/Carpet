@@ -193,11 +193,11 @@ body {
   margin-bottom: 0;
 }
 
-.some-icon {
+.icon {
   height: 24px;
 }
 
-.some-icon:hover {
+.icon:hover {
   transform: scale(1.1);
 }
 
@@ -279,7 +279,7 @@ body {
 
 .grid-container-global {
   grid-template-columns: 28% 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto;
   column-gap: 3%;
 }
 
@@ -316,24 +316,31 @@ body {
   align-items: center;
 }
 
-.icon-positions {
+.icon-positions-favorites {
   position: relative;
+}
+
+.icon-positions-cart {
+  position: relative;
+}
+
+.icon-img {
+  height: 24px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .favorites {
   position: absolute;
-  top: 0px;
-  margin-top: 10px;
+  top: -330px;
   right: 0px;
-  margin-right: 10px;
 }
 
 .cart {
   position: absolute;
   bottom: 0px;
-  margin-bottom: 47px;
   right: 0px;
-  margin-right: 10px;
 }
 
 span {
