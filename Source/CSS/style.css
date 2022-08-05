@@ -245,22 +245,29 @@ body {
   font-size: 11px;
 }
 
-.container-global > .grid-container-filter, .grid-container-global {
-  display: grid;
-}
-
-.grid-container-global > .grid-container-filter {
-  font-size: 16px;
-}
-
-.container-global {
+.container-global-frame {
   padding: 10px 0 10px 0;
   margin: 30px 0 30px 0;
 }
 
+.grid-container-global {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "filter card" "filter card" "filetr card";
+  column-gap: 5%;
+}
+
+.grid-container-filter {
+  grid-area: filter;
+}
+
+.grid-container-card {
+  grid-area: card;
+}
+
 .grid-container-filter > div {
   padding: 10px 0 10px 0;
-  text-align: start;
   cursor: pointer;
 }
 
@@ -277,16 +284,9 @@ body {
   color: #495057;
 }
 
-.grid-container-global {
-  grid-template-columns: 24% 1fr;
-  column-gap: 3%;
-}
-
 .grid-container-global > div {
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
   display: grid;
+  cursor: pointer;
 }
 
 .grid-container-card {
@@ -295,11 +295,6 @@ body {
   row-gap: 25px;
   column-gap: 16px;
   justify-items: center;
-}
-
-.grid-container-card > div {
-  text-align: center;
-  font-size: 14px;
 }
 
 .img-block {

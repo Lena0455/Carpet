@@ -126,7 +126,7 @@ function renderCarpets(el, items) {
 }
 
 function createCarpetHTMLElement(item) {
-    const carpetCreateDiv = document.createElement('div1');
+    const carpetCreateDiv = document.createElement('div');
 
     const {price, sale, image} = item
     //     const image = item.image;
