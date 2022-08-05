@@ -37,6 +37,21 @@ const carpetItems = [
         sale: true,
     },
     {
+        image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
+        price: 9790,
+        sale: true,
+    },
+    {
+        image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
+        price: 8790,
+        sale: false,
+    },
+    {
+        image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+        price: 17790,
+        sale: true,
+    },
+    {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
         price: 8790,
         sale: false,
@@ -78,8 +93,11 @@ const carpetItems = [
     },
 ]
 
-const favoritesIcon = "/Source/icons/Vector-f.svg"
-const cartIcon = "/Source/icons/Vector-5.svg"
+const favoritesIcon = "icon-Vector-4"
+const cartIcon = "icon-Vector-5"
+
+// const favoritesIcon = "/Source/icons/Vector-f.svg"
+// const cartIcon = "/Source/icons/Vector-5.svg"
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
 
@@ -108,21 +126,20 @@ function renderCarpets(el, items) {
 }
 
 function createCarpetHTMLElement(item) {
-    const carpetCreateDiv = document.createElement('div');
-
-    console.log(carpetCreateDiv);
+    const carpetCreateDiv = document.createElement('div1');
 
     const {price, sale, image} = item
     //     const image = item.image;
 
     carpetCreateDiv.innerHTML = `
-   <div id="card-container" class="grid-container-card">
-
-        <img src="${image}" alt="carpet" class="block"/>
+        <img src="${image}" alt="carpet" class="img-block"/>
            <div class="icon-positions-favorites">
-             <div class="favorites"><img class="icon-img" src="${favoritesIcon}" alt="cart"</div> </div>
-             <div class="icon-positions-cart">
-             <div class="cart"><img class="icon-img" src="${cartIcon}" alt="cart"</div>
+             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIcon}"></i></a>
+                <!-- <div class="favorites"><img class="icon-img" src="${favoritesIcon}" alt="cart"</div>--> 
+            </div>
+           <div class="icon-positions-cart">
+             <a href="" class="cart icon-img item__social icon-img icon-two"><i class="${cartIcon}"></i></a>
+                <!-- <div class="cart"><img class="icon-img" src="${cartIcon}" alt="cart"</div>-->
            </div>
         </div>
         
@@ -136,7 +153,6 @@ function createCarpetHTMLElement(item) {
             <p class="rub">₽</p>
           </div>
         </div>
-   </div>
     `
 
     return carpetCreateDiv;

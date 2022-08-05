@@ -272,6 +272,9 @@ align-items: center;
 .container-global > .grid-container-filter, .grid-container-global {
   display: grid;
 }
+//grid-container-filter {
+//  grid-area: 1
+//}
 .grid-container-global > .grid-container-filter {
   font-size: 16px;
 }
@@ -298,8 +301,8 @@ align-items: center;
 }
 //внешнии гриды (2)
 .grid-container-global {
-  grid-template-columns: 28% 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 24% 1fr;
+  //grid-template-rows: auto;
   column-gap: 3%;
 }
 .grid-container-global > div {
@@ -312,9 +315,9 @@ align-items: center;
 .grid-container-card {
  //grid-container-global (родитель) > div (наследник)
   grid-template-columns: auto auto auto; // наследник
-grid-template-rows: 1fr; //наследник
-  row-gap: 30px;
-  column-gap: 20px;
+  grid-template-rows: auto; //наследник
+  row-gap: 25px;
+  column-gap: 16px;
   justify-items: center
 
 }
@@ -325,9 +328,9 @@ grid-template-rows: 1fr; //наследник
 }
 
 //ширина и высота оконной рамы под картинку
-.block {
-  width: 200px;
-  height: 330px;
+.img-block {
+  width: 210px;
+  height: 350px;
   object-fit: cover;
   display: block;
 
@@ -344,11 +347,9 @@ grid-template-rows: 1fr; //наследник
 }
 .icon-positions-favorites {
   position: relative;
-
 }
 .icon-positions-cart {
   position: relative;
-
 }
 // иконки
 .icon-img {
@@ -418,11 +419,20 @@ price-white{
   background: $logo;
   cursor: pointer;
 }
+
+//.form-check {
+//  display: block;
+//  min-height: 1.5rem!important;
+//  padding-left: 1.5em!important;
+//  margin-bottom: 0.125rem!important;
+//}
+
 .form-check-input {
   border: none !important;
   outline: none !important;
   width: 18px!important;
   height: 18px!important;
+
 }
 .form-check-input:checked {
   background-color: $logo !important;
@@ -431,11 +441,12 @@ price-white{
 .form-check-input[type=checkbox] {
   border-radius: 0.25em;
 }
+
 .slider:hover {
   opacity: 1;
 }
 .form-check-label {
-  margin-top: 2px;
+margin: 4px;
 }
 .choice-bin {
   display: flex;
@@ -872,25 +883,6 @@ color: $prcolor;
 .card-selected img {
   filter: brightness(10);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

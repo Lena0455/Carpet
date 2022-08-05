@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icomoon.eot?gr3d3x');
+  src:  url('../../fonts/icomoon.eot?gr3d3x#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?gr3d3x') format('truetype'),
+    url('../../fonts/icomoon.woff?gr3d3x') format('woff'),
+    url('../../fonts/icomoon.svg?gr3d3x#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  /*font-display: block;*/
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /*line-height: 1;*/
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*.list > li {*/
+/*  display: inline-block;*/
+/*}*/
+
+.item__social {
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+  background: #ded3f1;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  font-size: 24px;
+
+}
+
+/*.icon-one {*/
+/*  color: green;*/
+/*}*/
+/*.icon-two {*/
+/*  color: red;*/
+/*}*/
+.icon-one:hover,
+.icon-two:hover {
+  transform: scale(1.1);
+}
+
+.icon-Vector-4:before {
+  content: "\e903";
+  color: #495057;
+}
+.icon-Vector-5:before {
+  content: "\e904";
+  color: #495057;
+}
+.icon-Vector-4 {
+
+}
+.icon-Vector-5 {
+
+}
