@@ -357,7 +357,7 @@ align-items: center;
   }
   .favorites {
     position: absolute;
-    top: -330px;
+    top: -350px;
     right: 0px;
   }
   .cart {
@@ -410,7 +410,7 @@ align-items: center;
     appearance: none;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
+    border-radius: 25%;
     background: $logo;
     cursor: pointer;
   }

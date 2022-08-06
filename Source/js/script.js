@@ -95,6 +95,8 @@ const carpetItems = [
 
 const favoritesIcon = "icon-Vector-4"
 const cartIcon = "icon-Vector-5"
+const favoritesIconFilling = "icon-IconFilling"
+
 
 // const favoritesIcon = "/Source/icons/Vector-f.svg"
 // const cartIcon = "/Source/icons/Vector-5.svg"
@@ -134,7 +136,7 @@ function createCarpetHTMLElement(item) {
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
            <div class="icon-positions-favorites">
-             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIcon}"></i></a>
+             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIconFilling}"></i></a>
                 <!-- <div class="favorites"><img class="icon-img" src="${favoritesIcon}" alt="cart"</div>--> 
             </div>
            <div class="icon-positions-cart">

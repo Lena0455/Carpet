@@ -327,7 +327,7 @@ body {
 
 .favorites {
   position: absolute;
-  top: -330px;
+  top: -350px;
   right: 0px;
 }
 
@@ -386,7 +386,7 @@ price-white {
   appearance: none;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 25%;
   background: #7954a3;
   cursor: pointer;
 }

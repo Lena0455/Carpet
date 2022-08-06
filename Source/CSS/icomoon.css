@@ -35,7 +35,8 @@
   display: flex;
   /*align-items: center;*/
   justify-content: center;
-  background: #ded3f1;
+  /*background: #ded3f1;*/
+  background: #fefdff;
   text-decoration: none;
   width: 35px;
   height: 35px;
@@ -44,12 +45,7 @@
 
 }
 
-/*.icon-one {*/
-/*  color: green;*/
-/*}*/
-/*.icon-two {*/
-/*  color: red;*/
-/*}*/
+
 .icon-one:hover,
 .icon-two:hover {
   transform: scale(1.1);
@@ -58,14 +54,25 @@
 .icon-Vector-4:before {
   content: "\e903";
   color: #495057;
+
 }
 .icon-Vector-5:before {
   content: "\e904";
   color: #495057;
+
 }
+
 .icon-Vector-4 {
 
 }
 .icon-Vector-5 {
+
+}
+.icon-one {
+
+
+}
+.icon-two {
+
 
 }
