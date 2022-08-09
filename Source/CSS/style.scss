@@ -348,6 +348,7 @@ align-items: center;
     position: relative;
   }
   // иконки
+
   .icon-img {
     //width: 24px;
     height: 24px;
@@ -586,6 +587,7 @@ align-items: center;
     display: flex;
     justify-content: space-between;
   }
+  //добавляет отступ к цене
   .price:nth-child(3)  {
     margin-left: 5px;
   }
@@ -611,6 +613,8 @@ align-items: center;
   .quantity-goods {
     align-items: flex-end;
     display: flex;
+    //justify-content: space-evenly
+    justify-content: center;
   }
 
   .one {

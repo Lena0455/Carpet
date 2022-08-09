@@ -95,27 +95,22 @@ const carpetItems = [
 
 const favoritesIcon = "icon-Vector-4"
 const cartIcon = "icon-Vector-5"
-const favoritesIconFilling = "icon-IconFilling"
-
-
-// const favoritesIcon = "/Source/icons/Vector-f.svg"
-// const cartIcon = "/Source/icons/Vector-5.svg"
+const favoritesIconFilling = "icon-Vector-4-filling"
+const cartIconFilling = "icon-Vector-5-filling"
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
-
 // function renderCarpets(el, items) {
 //     items.forEach((item, i) => {
 //         const carpetCard = createCarpetHTMLElement(item);
 //         const col = i % 3;
 //         el[col].appendChild(carpetCard);
 //     })
-
 // }
-
-
 // const carpetsGetEl = document.querySelector('.product-card'); // returns an HTMLElement
 const carpetsGetEl = document.getElementById('card-container');
+
 console.log(carpetsGetEl);
+
 
 renderCarpets(carpetsGetEl, carpetItems)
 
@@ -136,12 +131,13 @@ function createCarpetHTMLElement(item) {
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
            <div class="icon-positions-favorites">
+             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIcon}"></i></a>
              <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIconFilling}"></i></a>
-                <!-- <div class="favorites"><img class="icon-img" src="${favoritesIcon}" alt="cart"</div>--> 
+           
             </div>
            <div class="icon-positions-cart">
-             <a href="" class="cart icon-img item__social icon-img icon-two"><i class="${cartIcon}"></i></a>
-                <!-- <div class="cart"><img class="icon-img" src="${cartIcon}" alt="cart"</div>-->
+             <a href="" id="cart" class="cart icon-img item__social icon-img icon-two"><i class="${cartIcon}"></i></a>
+             <a href="" class="cart icon-img item__social icon-img icon-two"><i class="${cartIconFilling}"></i></a>
            </div>
         </div>
         
@@ -160,6 +156,77 @@ function createCarpetHTMLElement(item) {
     return carpetCreateDiv;
 
 }
+
+//
+// const carts = [
+//     {
+//         art: 'HL-714-GREY',
+//         thing: 10
+//     },
+//     {
+//         art: 'HLY-7915-GREY',
+//         thing: 7
+//     },
+//     {
+//         art: 'H14-GREY',
+//         thing: 6,
+//     },
+// ];
+// console.log(carts)
+
+
+// Представление корзины
+// const id714 = 'HL-714-GREY'
+
+
+
+// const getButton = document.querySelectorAll('.button-plus');
+//
+// getButton.forEach((element) => {
+//     element.addEventListener("click", (event) => {
+//
+//        if(event.currentTarget.classList.contains("quantity-goods")) {
+//            // console.log(event.target.dataset.id)
+//            plusFunction(event.target.dataset.id)
+//        }
+//
+//         // event.stopPropagation()
+//     })
+//
+// })
+
+
+const cart = {
+    rty714: 10,
+    uio14: 6,
+    op7915: 7,
+}
+document.onclick = (event) => {
+    // console.log(event.target.classList)
+    if (event.target.classList.contains('.button-plus')) {
+        console.log(event.target.dataset)
+        // plusFunction(event.target.dataset.id)
+    }
+}
+
+// let plusFunction = (id) =>  {
+//     cart[id]++
+// }
+
+// console.log(getButton)
+console.log(cart)
+//увеличение количества товара
+//уменьшение количества товара
+//удаление количества
+//отрисовка корзины
+
+
+
+
+
+
+
+
 
 /*   const elViolet = document.querySelector('#violet')
    console.log(elViolet.classList)

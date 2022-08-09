@@ -610,6 +610,7 @@ a {
 .quantity-goods {
   align-items: flex-end;
   display: flex;
+  justify-content: center;
 }
 
 .one {
