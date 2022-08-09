@@ -156,69 +156,88 @@ function createCarpetHTMLElement(item) {
     return carpetCreateDiv;
 
 }
-
-//
-// const carts = [
-//     {
-//         art: 'HL-714-GREY',
-//         thing: 10
-//     },
-//     {
-//         art: 'HLY-7915-GREY',
-//         thing: 7
-//     },
-//     {
-//         art: 'H14-GREY',
-//         thing: 6,
-//     },
-// ];
-// console.log(carts)
-
-
 // Представление корзины
-// const id714 = 'HL-714-GREY'
-
-
-
-// const getButton = document.querySelectorAll('.button-plus');
-//
-// getButton.forEach((element) => {
-//     element.addEventListener("click", (event) => {
-//
-//        if(event.currentTarget.classList.contains("quantity-goods")) {
-//            // console.log(event.target.dataset.id)
-//            plusFunction(event.target.dataset.id)
-//        }
-//
-//         // event.stopPropagation()
-//     })
-//
-// })
-
-
 const cart = {
-    rty714: 10,
-    uio14: 6,
-    op7915: 7,
+    'HL-714-IND' : {
+        art: 'HL-714-IND',
+        name: 'Индийский прямоугольный ковёр',
+        count: 2
+    },
+    'H14-LIT' : {
+        art: 'H14-LIT',
+        name: 'Маленкий коврик',
+        count: 3
+    },
+    'HLY-7915-WOLF' : {
+        art: 'HLY-7915-WOLF',
+        name: 'Белая волчья шкура',
+        count: 4
+    },
+};
+
+const getButtonPlus = document.querySelectorAll('.button-plus');
+const getButtonMinus = document.querySelectorAll('.button-minus');
+
+getButtonPlus.forEach((elementPlus) => {
+    elementPlus.addEventListener("click", (eventPlus) => {
+
+       if (eventPlus.currentTarget.classList.contains("button-plus")) {
+           plusFunction(eventPlus.target.dataset.id)
+
+       }
+       // event.stopPropagation()
+    })
+})
+
+//увеличение количества товара
+const plusFunction = (id) =>  {
+    cart[id]['count']++
+    renderCart()
 }
-document.onclick = (event) => {
-    // console.log(event.target.classList)
-    if (event.target.classList.contains('.button-plus')) {
-        console.log(event.target.dataset)
-        // plusFunction(event.target.dataset.id)
+getButtonMinus.forEach((elementMinus) => {
+    elementMinus.addEventListener("click", (eventMinus) => {
+
+        if (eventMinus.currentTarget.classList.contains("button-minus")) {
+            minusFunction(eventMinus.target.dataset.id)
+        }
+        // event.stopPropagation()
+    })
+})
+
+//уменьшение количества товара
+const minusFunction = (id) =>  {
+    if (cart[id]['count'] - 1 === 0) {
+        deleteFunction(id)
+        return true
     }
+    cart[id]['count']--
+    renderCart()
+}
+//удаление количества
+const deleteFunction = (id) =>  {
+    delete cart[id]
+    renderCart()
+}
+//отрисовка корзины
+const renderCart = () => {
+    console.log(cart)
 }
 
-// let plusFunction = (id) =>  {
-//     cart[id]++
+renderCart()
+
+// через onclick
+// document.onclick = (event) => {
+//     if (event.target.classList.contains('button-plus' && "button-minus")) {
+//         console.log(event.target.dataset)
+//         // plusFunction(event.target.dataset.id)
+//         console.log(event.target.classList)
+//     }
 // }
 
-// console.log(getButton)
-console.log(cart)
-//увеличение количества товара
-//уменьшение количества товара
-//удаление количества
-//отрисовка корзины
+
+
+
+
 
 
 
