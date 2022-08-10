@@ -2,10 +2,26 @@ const carpetsEl = document.getElementById("items");
 
 renderCarpets(carpetsEl, carpetItems);
 
+// корзина
+const cart = [];
+
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpet = createCarpetHTMLElement(item);
+        addCardListeners(carpet);
+
         el.appendChild(carpet);
+    })
+}
+
+function addCardListeners(cardHTMLElement) {
+    const addToCart = cardHTMLElement.querySelector('.add-to-cart')
+
+    // добавляем слушатель для конкретной карточки с добавлением соотв. товара.
+    addToCart.addEventListener('click', (event) => {
+        // добавляем товар из карточки в корзину
+        cart.push(item);
+        console.log(cart);
     })
 }
 
@@ -21,6 +37,8 @@ function createCarpetHTMLElement(item) {
         <p>${description}</p>
         <img src="${image}"/>
         <span>${price}</span>
+
+        <button class="add-to-cart">add to cart</button>
     `
 
     return el;

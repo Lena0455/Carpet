@@ -1,6 +1,7 @@
 console.log(document.documentElement)
 
 // const inverseDelivery = document.querySelector('.')
+// delieveryIconInverted!
 const inverseDelivery = document.querySelectorAll(".delivery-column > div")
 console.log(inverseDelivery)
 
@@ -111,15 +112,18 @@ const carpetsGetEl = document.getElementById('card-container');
 
 console.log(carpetsGetEl);
 
-
 renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpetCard = createCarpetHTMLElement(item);
+        carpetCard.getElementById('cart').addEventListener('click', (event) => {
+            cart.push(item);
+            console.log(cart);
+        })
+
         el.appendChild(carpetCard);
     })
-
 }
 
 function createCarpetHTMLElement(item) {
@@ -154,32 +158,61 @@ function createCarpetHTMLElement(item) {
     `
 
     return carpetCreateDiv;
-
 }
+
 // Представление корзины
-const cart = {
-    'HL-714-IND' : {
+// const cart = {
+//     'HL-714-IND' : {
+//         art: 'HL-714-IND',
+//         name: 'Индийский прямоугольный ковёр',
+//         image: "/Source/img/pexels-max-vakhtbovych-7018250.jpg",
+//         count: 2,
+//         price: 9000
+//     },
+//     'H14-LIT' : {
+//         art: 'H14-LIT',
+//         name: 'Маленкий коврик',
+//         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+//         count: 3,
+//         price: 800
+//     },
+//     'HLY-7915-WOLF' : {
+//         art: 'HLY-7915-WOLF',
+//         name: 'Белая волчья шкура',
+//         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+//         count: 4,
+//         price: 200000
+//     },
+// };
+
+
+// массив вместо объектов
+const cart = [
+    {
         art: 'HL-714-IND',
         name: 'Индийский прямоугольный ковёр',
         image: "/Source/img/pexels-max-vakhtbovych-7018250.jpg",
         count: 2,
         price: 9000
     },
-    'H14-LIT' : {
+    {
         art: 'H14-LIT',
         name: 'Маленкий коврик',
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         count: 3,
         price: 800
     },
-    'HLY-7915-WOLF' : {
+    {
         art: 'HLY-7915-WOLF',
         name: 'Белая волчья шкура',
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
         count: 4,
         price: 200000
     },
-};
+];
+
+// пример для добавления нового товара в корзину.
+// cart.push(carpetItem)
 
 const getButtonPlus = document.querySelectorAll('.button-plus');
 const getButtonMinus = document.querySelectorAll('.button-minus');
@@ -227,6 +260,8 @@ const deleteFunction = (id) =>  {
 //отрисовка корзины
 const renderCart = () => {
     console.log(cart)
+
+    cart
 }
 
 renderCart()
@@ -240,23 +275,9 @@ renderCart()
 //     }
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*   const elViolet = document.querySelector('#violet')
    console.log(elViolet.classList)
    elViolet.classList.add('product-details')*/
-
 
 // const elViolet = document.getElementById('violet')
 // const createColorDiv = document.createElement('div');
