@@ -161,17 +161,23 @@ const cart = {
     'HL-714-IND' : {
         art: 'HL-714-IND',
         name: 'Индийский прямоугольный ковёр',
-        count: 2
+        image: "/Source/img/pexels-max-vakhtbovych-7018250.jpg",
+        count: 2,
+        price: 9000
     },
     'H14-LIT' : {
         art: 'H14-LIT',
         name: 'Маленкий коврик',
-        count: 3
+        image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+        count: 3,
+        price: 800
     },
     'HLY-7915-WOLF' : {
         art: 'HLY-7915-WOLF',
         name: 'Белая волчья шкура',
-        count: 4
+        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+        count: 4,
+        price: 200000
     },
 };
 
