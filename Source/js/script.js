@@ -130,6 +130,8 @@ function renderCarpets(el, items) {
         // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
         // const cartButton = carpetCard.querySelector('button.cart') // не ищет
         // const cartButton = carpetCard.querySelector('img.img-block') // ищет
+
+        // добавление товара в корзину по клику
         const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
         console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
