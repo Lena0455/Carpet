@@ -1,6 +1,7 @@
 console.log(document.documentElement)
 
 // const inverseDelivery = document.querySelector('.')
+// к массиву не добавить слушатель
 // delieveryIconInverted!
 const inverseDelivery = document.querySelectorAll(".delivery-column > div")
 console.log(inverseDelivery)
@@ -31,6 +32,7 @@ inverseDeliveryIcon.forEach((elementInverse) => {
 
 // Рендер карточек
 
+// Представление карточек (items)
 const carpetItems = [
     {
         image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
@@ -94,10 +96,14 @@ const carpetItems = [
     },
 ]
 
+// Переменные для иконок favorites и cart
 const favoritesIcon = "icon-Vector-4"
 const cartIcon = "icon-Vector-5"
 const favoritesIconFilling = "icon-Vector-4-filling"
 const cartIconFilling = "icon-Vector-5-filling"
+
+// Представление корзины ввиде массива (вместо объектов)
+const cart = [];
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
 // function renderCarpets(el, items) {
@@ -108,40 +114,54 @@ const cartIconFilling = "icon-Vector-5-filling"
 //     })
 // }
 // const carpetsGetEl = document.querySelector('.product-card'); // returns an HTMLElement
+
+// Получение element of item
 const carpetsGetEl = document.getElementById('card-container');
+console.log(carpetsGetEl); // div#card-container.grid-container-card
 
-console.log(carpetsGetEl);
-
+// Функция рендера карточек
 renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpetCard = createCarpetHTMLElement(item);
-        carpetCard.getElementById('cart').addEventListener('click', (event) => {
+        console.log(carpetCard) // элемет находит
+
+        // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
+        // const cartButton = carpetCard.querySelector('button.cart') // не ищет
+        // const cartButton = carpetCard.querySelector('img.img-block') // ищет
+        const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
+        console.log(cartButton)
+        cartButton.addEventListener('click', (event) => {
+        // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
+        // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
             cart.push(item);
-            console.log(cart);
+            console.log(cart)
         })
 
         el.appendChild(carpetCard);
+
     })
 }
 
+
+// функция создания элемента
 function createCarpetHTMLElement(item) {
     const carpetCreateDiv = document.createElement('div');
 
     const {price, sale, image} = item
     //     const image = item.image;
-
+    // el
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
            <div class="icon-positions-favorites">
-             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIcon}"></i></a>
-             <a href=""  class="favorites item__social icon-img icon-one"><i class="${favoritesIconFilling}"></i></a>
+             <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
+             <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
            
-            </div>
+            </dhov
            <div class="icon-positions-cart">
-             <a href="" id="cart" class="cart icon-img item__social icon-img icon-two"><i class="${cartIcon}"></i></a>
-             <a href="" class="cart icon-img item__social icon-img icon-two"><i class="${cartIconFilling}"></i></a>
+             <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
+             <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
            </div>
         </div>
         
@@ -187,84 +207,84 @@ function createCarpetHTMLElement(item) {
 
 
 // массив вместо объектов
-const cart = [
-    {
-        art: 'HL-714-IND',
-        name: 'Индийский прямоугольный ковёр',
-        image: "/Source/img/pexels-max-vakhtbovych-7018250.jpg",
-        count: 2,
-        price: 9000
-    },
-    {
-        art: 'H14-LIT',
-        name: 'Маленкий коврик',
-        image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
-        count: 3,
-        price: 800
-    },
-    {
-        art: 'HLY-7915-WOLF',
-        name: 'Белая волчья шкура',
-        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-        count: 4,
-        price: 200000
-    },
-];
+// const cart = [
+// {
+//     art: 'HL-714-IND',
+//     name: 'Индийский прямоугольный ковёр',
+//     image: "/Source/img/pexels-max-vakhtbovych-7018250.jpg",
+//     count: 2,
+//     price: 9000
+// },
+// {
+//     art: 'H14-LIT',
+//     name: 'Маленкий коврик',
+//     image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+//     count: 3,
+//     price: 800
+// },
+// {
+//     art: 'HLY-7915-WOLF',
+//     name: 'Белая волчья шкура',
+//     image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+//     count: 4,
+//     price: 200000
+// },
+// ];
 
 // пример для добавления нового товара в корзину.
 // cart.push(carpetItem)
 
-const getButtonPlus = document.querySelectorAll('.button-plus');
-const getButtonMinus = document.querySelectorAll('.button-minus');
+// const getButtonPlus = document.querySelectorAll('.button-plus');
+// const getButtonMinus = document.querySelectorAll('.button-minus');
+//
+// getButtonPlus.forEach((elementPlus) => {
+//     elementPlus.addEventListener("click", (eventPlus) => {
+//
+//         if (eventPlus.currentTarget.classList.contains("button-plus")) {
+//             plusFunction(eventPlus.target.dataset.id)
+//
+//         }
+//         // event.stopPropagation()
+//     })
+// })
+//
+// //увеличение количества товара
+// const plusFunction = (id) => {
+//     cart[id]['count']++
+//     renderCart()
+// }
+// getButtonMinus.forEach((elementMinus) => {
+//     elementMinus.addEventListener("click", (eventMinus) => {
+//
+//         if (eventMinus.currentTarget.classList.contains("button-minus")) {
+//             minusFunction(eventMinus.target.dataset.id)
+//         }
+//         // event.stopPropagation()
+//     })
+// })
+//
+// //уменьшение количества товара
+// const minusFunction = (id) => {
+//     if (cart[id]['count'] - 1 === 0) {
+//         deleteFunction(id)
+//         return true
+//     }
+//     cart[id]['count']--
+//     renderCart()
+// }
+// //удаление количества
+// const deleteFunction = (id) => {
+//     delete cart[id]
+//     renderCart()
+// }
+// //отрисовка корзины
+// const renderCart = () => {
+//     console.log(cart)
+//
+//
+// }
 
-getButtonPlus.forEach((elementPlus) => {
-    elementPlus.addEventListener("click", (eventPlus) => {
-
-       if (eventPlus.currentTarget.classList.contains("button-plus")) {
-           plusFunction(eventPlus.target.dataset.id)
-
-       }
-       // event.stopPropagation()
-    })
-})
-
-//увеличение количества товара
-const plusFunction = (id) =>  {
-    cart[id]['count']++
-    renderCart()
-}
-getButtonMinus.forEach((elementMinus) => {
-    elementMinus.addEventListener("click", (eventMinus) => {
-
-        if (eventMinus.currentTarget.classList.contains("button-minus")) {
-            minusFunction(eventMinus.target.dataset.id)
-        }
-        // event.stopPropagation()
-    })
-})
-
-//уменьшение количества товара
-const minusFunction = (id) =>  {
-    if (cart[id]['count'] - 1 === 0) {
-        deleteFunction(id)
-        return true
-    }
-    cart[id]['count']--
-    renderCart()
-}
-//удаление количества
-const deleteFunction = (id) =>  {
-    delete cart[id]
-    renderCart()
-}
-//отрисовка корзины
-const renderCart = () => {
-    console.log(cart)
-
-    cart
-}
-
-renderCart()
+// renderCart()
 
 // через onclick
 // document.onclick = (event) => {
