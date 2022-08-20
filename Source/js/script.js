@@ -35,64 +35,69 @@ inverseDeliveryIcon.forEach((elementInverse) => {
 // Представление карточек (items)
 const carpetItems = [
     {
+        // (item)
         image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
         price: 9790,
         sale: true,
+        title: "Ковер",
+        art: "HL-714-IND",
     },
     {
+        // (item)
         image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
         price: 9790,
         sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
         price: 8790,
         sale: false,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
         sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
         price: 8790,
         sale: false,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
         sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
         price: 117790,
         sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
         price: 790,
         sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
     {
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
         price: 117790,
         sale: true,
-    },
-    {
-        image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
-        price: 790,
-        sale: true,
-    },
-    {
-        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-        price: 117790,
-        sale: true,
-    },
-    {
-        image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
-        price: 790,
-        sale: true,
+        name: "Ковер",
+        art: "HL-714-IND",
     },
 ]
 
@@ -119,21 +124,21 @@ const cart = [];
 const carpetsGetEl = document.getElementById('card-container');
 console.log(carpetsGetEl); // div#card-container.grid-container-card
 
-// Функция рендера карточек
+// функция рендера карточек
 renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpetCard = createCarpetHTMLElement(item);
-        console.log(carpetCard) // элемет находит
+        // console.log(carpetCard) // элемет находит
 
         // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
         // const cartButton = carpetCard.querySelector('button.cart') // не ищет
         // const cartButton = carpetCard.querySelector('img.img-block') // ищет
 
-        // добавление товара в корзину по клику
+        // функция добавления товара в корзину по клику
         const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
-        console.log(cartButton)
+        // console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
         // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
         // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
@@ -147,12 +152,17 @@ function renderCarpets(el, items) {
 }
 
 
-// функция создания элемента
+// функция создания HTML элемента
 function createCarpetHTMLElement(item) {
     const carpetCreateDiv = document.createElement('div');
 
-    const {price, sale, image} = item
-    //     const image = item.image;
+    // деструктуризация объектов item
+    //  const image = item.image;
+        const {price, sale, image, title, art} = item //  объявление новых переменных и присваивание им значений
+                                         //  на основе значений свойств объекта
+    // console.log(price);
+    console.log(item);
+
     // el
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
@@ -178,9 +188,83 @@ function createCarpetHTMLElement(item) {
           </div>
         </div>
     `
-
     return carpetCreateDiv;
 }
+
+// рендер корзины
+
+// Получение element of item
+
+
+// функция рендера
+ function renderBucketElement(items) {
+items.forEach((item) => {
+
+     })
+ }
+renderBucketElement()
+
+// функция создания HTML елементов
+function createBucketElement(item) {
+    const bucketElement = document.createElement('div')
+    console.log(bucketElement)
+createBucketElement(item)
+
+    // const {price, sale, image, title, art, total} = item
+
+    bucketElement.innerHTML =
+    `<div class="choice-order-wrap">
+    <div class="choice-order">
+        <div class="product-card-choice">
+            <a href="#">
+                <img src="${image}">
+            </a>
+        </div>
+        <div class="about-item">
+            <div>
+                <h5 class="title">${title}</h5>
+            </div>
+            <div class="include">
+                <div class="art-wrap">
+                    <p class="art-name">Артикул:</p>
+                    <p class="art">${art}</p>
+                </div>
+                <div class="product-put">
+                    <div class="sum">
+                        <div class="description-sum">Цена:</div>
+                        <div class="description-price">${price}</div>
+                        <p class="description-ru">₽</p>
+                    </div>
+                    <div class="goods">
+                        <div class="quantity-goods">
+                            <button class="button-minus">-</button>
+                            <input type="text" min="1" max="9" class="numb" placeholder="1">
+                            <button class="button-plus">+</button>
+                        </div>
+                        <div class="bin"><img class="icon" src="/Source/icons/Trash Can.svg" alt="bin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`
+return bucketElement;
+}
+
+// функция суммирования товаров
+// redyce
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Представление корзины
 // const cart = {
