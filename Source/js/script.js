@@ -43,60 +43,31 @@ const carpetItems = [
         art: "HL-714-IND",
     },
     {
-        // (item)
-        image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
-        price: 9790,
-        sale: true,
-        name: "Ковер",
-        art: "HL-714-IND",
-    },
-    {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
         price: 8790,
         sale: false,
-        name: "Ковер",
+        title: "Ковер",
         art: "HL-714-IND",
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
         sale: true,
-        name: "Ковер",
-        art: "HL-714-IND",
-    },
-    {
-        image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-        price: 8790,
-        sale: false,
-        name: "Ковер",
-        art: "HL-714-IND",
-    },
-    {
-        image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
-        price: 17790,
-        sale: true,
-        name: "Ковер",
+        title: "Ковер",
         art: "HL-714-IND",
     },
     {
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
         price: 117790,
         sale: true,
-        name: "Ковер",
+        title: "Ковер",
         art: "HL-714-IND",
     },
     {
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
         price: 790,
         sale: true,
-        name: "Ковер",
-        art: "HL-714-IND",
-    },
-    {
-        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-        price: 117790,
-        sale: true,
-        name: "Ковер",
+        title: "Ковер",
         art: "HL-714-IND",
     },
 ]
@@ -124,13 +95,14 @@ const cart = [];
 const carpetsGetEl = document.getElementById('card-container');
 console.log(carpetsGetEl); // div#card-container.grid-container-card
 
-// функция рендера карточек
+
+// вызов функции рендера карточек
 renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpetCard = createCarpetHTMLElement(item);
-        // console.log(carpetCard) // элемет находит
+        console.log(carpetCard) // элемет находит
 
         // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
         // const cartButton = carpetCard.querySelector('button.cart') // не ищет
@@ -140,8 +112,8 @@ function renderCarpets(el, items) {
         const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
         // console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
-        // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
-        // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
+            // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
+            // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
             cart.push(item);
             console.log(cart)
         })
@@ -149,19 +121,38 @@ function renderCarpets(el, items) {
         el.appendChild(carpetCard);
 
     })
+
 }
 
 
-// функция создания HTML элемента
+
+// Получение element of item
+const basketGetEl = document.getElementById('choice');
+console.log(basketGetEl)
+
+// вызов функции рендера корзины
+renderBasket(basketGetEl, carpetItems)
+
+function renderBasket(el, items) {
+    items.forEach((item) => {
+        const carpetBasket =  createBasketHTMLElement(item)
+        console.log(carpetBasket)
+        el.appendChild(carpetBasket)
+
+    })
+
+}
+
+// функция создания HTML элемента Carpet
 function createCarpetHTMLElement(item) {
     const carpetCreateDiv = document.createElement('div');
 
     // деструктуризация объектов item
     //  const image = item.image;
-        const {price, sale, image, title, art} = item //  объявление новых переменных и присваивание им значений
-                                         //  на основе значений свойств объекта
+    const {price, sale, image, title, art} = item //  объявление новых переменных и присваивание им значений
+    //  на основе значений свойств объекта
     // console.log(price);
-    console.log(item);
+    // console.log(item);
 
     // el
     carpetCreateDiv.innerHTML = `
@@ -169,14 +160,14 @@ function createCarpetHTMLElement(item) {
            <div class="icon-positions-favorites">
              <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
              <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
-           
+
             </dhov
            <div class="icon-positions-cart">
              <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
              <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
            </div>
         </div>
-        
+
         <div class="product-details">
           <div class="product-price">
             <span-decoration>${sale}</span-decoration>
@@ -186,34 +177,19 @@ function createCarpetHTMLElement(item) {
             <div class="price">${price}</div>
             <p class="rub">₽</p>
           </div>
-        </div>
-    `
+        </div>`
     return carpetCreateDiv;
 }
 
-// рендер корзины
 
-// Получение element of item
+// функция создания HTML элемента Basket
+function createBasketHTMLElement(item) {
+        const basketCreateDiv = document.createElement('div');
 
-
-// функция рендера
- function renderBucketElement(items) {
-items.forEach((item) => {
-
-     })
- }
-renderBucketElement()
-
-// функция создания HTML елементов
-function createBucketElement(item) {
-    const bucketElement = document.createElement('div')
-    console.log(bucketElement)
-createBucketElement(item)
-
-    // const {price, sale, image, title, art, total} = item
-
-    bucketElement.innerHTML =
-    `<div class="choice-order-wrap">
+    // деструктуризация объектов item
+    const {price, sale, image, title, art} = item
+   // el
+    basketCreateDiv.innerHTML = `<div class="choice-order-wrap">
     <div class="choice-order">
         <div class="product-card-choice">
             <a href="#">
@@ -248,22 +224,19 @@ createBucketElement(item)
         </div>
     </div>
 </div>`
-return bucketElement;
-}
+    return basketCreateDiv;
+    }
+
+
+
+// let retEl = () => {
+//     return [carpetCreateDiv, basketCreateDiv]
+// }
+// console.log(retEl()[1])
+
 
 // функция суммирования товаров
 // redyce
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Представление корзины

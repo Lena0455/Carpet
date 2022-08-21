@@ -277,11 +277,12 @@ align-items: center;
 .grid-container-global {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
   grid-template-areas: 'filter card'
                        'filter card'
                        'filetr card';
   column-gap: 5%;
+  align-items: start; //убрал пробел между карточками
 }
 
 .grid-container-filter {
@@ -289,6 +290,7 @@ align-items: center;
 }
 
 .grid-container-card {
+
   grid-area: card;
 }
 
@@ -316,7 +318,7 @@ align-items: center;
   .grid-container-card {
     //grid-container-global (родитель) > div (наследник)
     grid-template-columns: auto auto auto; // наследник
-    grid-template-rows: auto; //наследник
+    grid-template-rows: auto ; //наследник
     row-gap: 25px;
     column-gap: 16px;
     justify-items: center
