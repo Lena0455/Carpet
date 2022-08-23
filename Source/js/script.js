@@ -31,7 +31,6 @@ inverseDeliveryIcon.forEach((elementInverse) => {
 })
 
 // Рендер карточек
-
 // Представление карточек (items)
 const carpetItems = [
     {
@@ -42,13 +41,13 @@ const carpetItems = [
         title: "Ковер",
         art: "HL-714-IND",
     },
-    {
-        image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-        price: 8790,
-        sale: false,
-        title: "Ковер",
-        art: "HL-714-IND",
-    },
+    // {
+    //     image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
+    //     price: 8790,
+    //     sale: false,
+    //     title: "Ковер",
+    //     art: "HL-714-IND",
+    // },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
@@ -56,13 +55,13 @@ const carpetItems = [
         title: "Ковер",
         art: "HL-714-IND",
     },
-    {
-        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-        price: 117790,
-        sale: true,
-        title: "Ковер",
-        art: "HL-714-IND",
-    },
+    // {
+    //     image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+    //     price: 117790,
+    //     sale: true,
+    //     title: "Ковер",
+    //     art: "HL-714-IND",
+    // },
     {
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
         price: 790,
@@ -78,7 +77,8 @@ const cartIcon = "icon-Vector-5"
 const favoritesIconFilling = "icon-Vector-4-filling"
 const cartIconFilling = "icon-Vector-5-filling"
 
-// Представление корзины ввиде массива (вместо объектов)
+// Представление корзины ввиде массива
+// Сюда по клику попадает объект, осюда же берутся данные для отрисовки
 const cart = [];
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
@@ -95,14 +95,13 @@ const cart = [];
 const carpetsGetEl = document.getElementById('card-container');
 console.log(carpetsGetEl); // div#card-container.grid-container-card
 
-
 // вызов функции рендера карточек
 renderCarpets(carpetsGetEl, carpetItems)
 
 function renderCarpets(el, items) {
     items.forEach((item) => {
         const carpetCard = createCarpetHTMLElement(item);
-        console.log(carpetCard) // элемет находит
+        console.log(carpetCard)
 
         // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
         // const cartButton = carpetCard.querySelector('button.cart') // не ищет
@@ -117,30 +116,8 @@ function renderCarpets(el, items) {
             cart.push(item);
             console.log(cart)
         })
-
         el.appendChild(carpetCard);
-
     })
-
-}
-
-
-
-// Получение element of item
-const basketGetEl = document.getElementById('choice');
-console.log(basketGetEl)
-
-// вызов функции рендера корзины
-renderBasket(basketGetEl, carpetItems)
-
-function renderBasket(el, items) {
-    items.forEach((item) => {
-        const carpetBasket =  createBasketHTMLElement(item)
-        console.log(carpetBasket)
-        el.appendChild(carpetBasket)
-
-    })
-
 }
 
 // функция создания HTML элемента Carpet
@@ -149,7 +126,7 @@ function createCarpetHTMLElement(item) {
 
     // деструктуризация объектов item
     //  const image = item.image;
-    const {price, sale, image, title, art} = item //  объявление новых переменных и присваивание им значений
+    const {image, price, sale, title, art} = item //  объявление новых переменных и присваивание им значений
     //  на основе значений свойств объекта
     // console.log(price);
     // console.log(item);
@@ -159,12 +136,17 @@ function createCarpetHTMLElement(item) {
         <img src="${image}" alt="carpet" class="img-block"/>
            <div class="icon-positions-favorites">
              <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
-             <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
+             <a href="https://learn.javascript.ru/destructuring-assignment"
+               <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
+             </a>
 
-            </dhov
+            
            <div class="icon-positions-cart">
-             <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
-             <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+            <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>  
+<!--              <a href="/cart.html"-->
+                <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+<!--              </a>-->
+           
            </div>
         </div>
 
@@ -180,21 +162,38 @@ function createCarpetHTMLElement(item) {
         </div>`
     return carpetCreateDiv;
 }
+/*-------------------------------------------------------------*/
+// Получение element of item
+const basketGetEl = document.getElementById('choice');
+console.log(basketGetEl)
 
+// вызов функции рендера корзины покупателя
+function renderBasket(el, items) {
+    items.forEach((item) => {
+        // функция должна рисовать корзину покупателя но основе массива cart
+        // перебрать массив cart, это даст поштучный вывод item по нажатию на иконку
+        const carpetBasket =  createBasketHTMLElement(item)
+
+        el.appendChild(carpetBasket)
+        console.log(carpetBasket) // элемет находит
+    })
+}
+renderBasket(basketGetEl, carpetItems)
 
 // функция создания HTML элемента Basket
+
 function createBasketHTMLElement(item) {
-        const basketCreateDiv = document.createElement('div');
+    const basketCreateDiv = document.createElement('div');
 
     // деструктуризация объектов item
-    const {price, sale, image, title, art} = item
-   // el
+    const [image, price, sale, title, art] = item;
+    console.log(art)
+    console.log(cart)
+    // el
     basketCreateDiv.innerHTML = `<div class="choice-order-wrap">
     <div class="choice-order">
         <div class="product-card-choice">
-            <a href="#">
-                <img src="${image}">
-            </a>
+              <img src="/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg" alt="carpet" class=preview"/>
         </div>
         <div class="about-item">
             <div>
@@ -211,6 +210,7 @@ function createBasketHTMLElement(item) {
                         <div class="description-price">${price}</div>
                         <p class="description-ru">₽</p>
                     </div>
+
                     <div class="goods">
                         <div class="quantity-goods">
                             <button class="button-minus">-</button>
@@ -223,10 +223,13 @@ function createBasketHTMLElement(item) {
             </div>
         </div>
     </div>
-</div>`
+</div>
+`
+    console.log(basketCreateDiv) // создает
     return basketCreateDiv;
-    }
 
+}
+createBasketHTMLElement()
 
 
 // let retEl = () => {
@@ -237,7 +240,30 @@ function createBasketHTMLElement(item) {
 
 // функция суммирования товаров
 // redyce
-
+//
+// .innerHTML = `<div class="choice-order-wrap">
+//     <div class="sum-left">
+//         <div class="description-row-cont">
+//             <div class="description-row">
+//                 <div class="union">
+//                     <p class="conclusion">Всего:<span> 209 800</span>₽</p></p>
+//
+//                 </div>
+//             </div>
+//             <div class="description-row">
+//                 <div class="union">
+//                     <p class="conclusion">Скидка составила:<span>- 9 800</span>₽</p>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="sum">
+//         <div class="description-sum">Итого:</div>
+//         <div class="description-price">200 000</div>
+//         <p class="description-ru">₽</p>
+//         <button type="button" class="success">Оформить доставку</button>
+//     </div>
+// </div>`
 
 // Представление корзины
 // const cart = {
