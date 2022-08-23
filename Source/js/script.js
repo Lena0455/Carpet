@@ -78,7 +78,7 @@ const favoritesIconFilling = "icon-Vector-4-filling"
 const cartIconFilling = "icon-Vector-5-filling"
 
 // Представление корзины ввиде массива
-// Сюда по клику попадает объект, осюда же берутся данные для отрисовки
+// Сюда по клику попадает объект, осюда же берутся данные для отрисовки карзины пользователя
 const cart = [];
 
 // const carpetsGetElements = document.querySelectorAll('.product-card') // returns an array [el, el, el]
