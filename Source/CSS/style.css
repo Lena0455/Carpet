@@ -301,6 +301,7 @@ body {
 .img-block {
   width: 210px;
   height: 350px;
+  object-fit: cover;
   display: block;
 }
 
@@ -338,8 +339,8 @@ body {
 }
 
 span {
-  color: #212529;
-  padding: 0 2px 0 5px;
+  color: #495057;
+  padding: 0 2px 0 20px;
 }
 
 span-decoration {
@@ -436,8 +437,11 @@ price-white {
 }
 
 .product-card-choice {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: revert;
+}
+
+.product-card-basket {
+  overflow: hidden;
 }
 
 .choice-order {
@@ -445,6 +449,7 @@ price-white {
 }
 
 .preview {
+  width: 240px;
   height: 200px;
   object-fit: cover;
   gap: 2%;
@@ -555,6 +560,7 @@ a {
   padding: 10px;
   margin-left: 80px;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
 
 .success:active {
@@ -712,11 +718,13 @@ a {
 .union {
   display: flex;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .conclusion {
   font-weight: 500;
   margin-right: 20px;
+  color: #495057;
 }
 
 .delivery-column {

@@ -41,13 +41,13 @@ const carpetItems = [
         title: "Ковер c золотым орнаментом",
         art: "HL-714-ZOL",
     },
-    // {
-    //     image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-    //     price: 8790,
-    //     sale: false,
-    //     title: "Ковер",
-    //     art: "HL-714-IND",
-    // },
+    {
+        image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
+        price: 8790,
+        sale: false,
+        title: "Ковер выставочный",
+        art: "HL-714-IND",
+    },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
@@ -55,13 +55,13 @@ const carpetItems = [
         title: "Маленький серый ковер",
         art: "HL-214-GR",
     },
-    // {
-    //     image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-    //     price: 117790,
-    //     sale: true,
-    //     title: "Ковер",
-    //     art: "HL-714-IND",
-    // },
+    {
+        image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+        price: 117790,
+        sale: true,
+        title: "Белая шкура",
+        art: "HL-714-IND",
+    },
     {
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
         price: 790,

@@ -375,7 +375,7 @@ body {
 .img-block {
   width: 210px;
   height: 350px;
-  //object-fit: cover;
+  object-fit: cover;
   display: block;
 
 }
@@ -421,8 +421,8 @@ body {
 }
 
 span {
-  color: $hovcolor;
-  padding: 0 2px 0 5px;
+  color: $textcolor;
+  padding: 0 2px 0 20px;
 }
 
 span-decoration {
@@ -536,8 +536,11 @@ price-white {
 }
 
 .product-card-choice {
-  overflow-x: hidden;
-  overflow-y: hidden;
+// отцентровал превью
+  overflow: revert;
+}
+.product-card-basket {
+  overflow: hidden;
 }
 
 .choice-order {
@@ -546,10 +549,11 @@ price-white {
 
 .preview {
   //width: auto;
-  //width: 600px;
+  width: 240px;
   height: 200px;
   object-fit: cover;
   gap: 2%;
+
 
 }
 
@@ -664,6 +668,8 @@ a {
   padding: 10px;
   margin-left: 80px;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+
 }
 
 .success:active {
@@ -826,11 +832,13 @@ a {
 .union {
   display: flex;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .conclusion {
   font-weight: 500;
   margin-right: 20px;
+  color: $textcolor;
 }
 
 .delivery-column {

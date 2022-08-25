@@ -55,8 +55,9 @@ function createBasketHTMLElement(item) {
             </div>
         </div>
     </div>
-</div>
-`
+    
+</div>`
+
     console.log(basketCreateDiv) // создает
     return basketCreateDiv;
 }
@@ -65,3 +66,34 @@ const basketElement = document.getElementById("basket")
 renderBasket(basketElement, basket)
 
 console.log("card js loaded")
+
+const getSumElem = document.getElementById('sum')
+
+getSumElem.innerHTML = `<div class="choice-order-wrap">
+    <div class="sum-left">
+        <div class="description-row-cont">
+            <div class="description-row">
+                <div class="union">
+                    <p class="conclusion">Всего:<span>209 800</span>₽</p></p>
+
+                </div>
+            </div>
+            <div class="description-row">
+                <div class="union">
+                    <p class="conclusion">Скидка составила:<span>- 9 800</span>₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sum">
+        <div class="description-sum">Итого:</div>
+        <div class="description-price">200 000</div>
+        <p class="description-ru">₽</p>
+        <button type="button" class="success">Перейти к оформлению</button>
+    </div>
+</div>`
+
+
+function getSumItem() {
+
+}
