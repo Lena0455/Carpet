@@ -24,7 +24,8 @@ function createBasketHTMLElement(item) {
     basketCreateDiv.innerHTML = `<div class="choice-order-wrap">
     <div class="choice-order">
         <div class="product-card-choice">
-              <img src="/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg" alt="carpet" class=preview"/>
+
+              <img src="${image}" alt="carpet" class="preview"/>
         </div>
         <div class="about-item">
             <div>

@@ -38,8 +38,8 @@ const carpetItems = [
         image: "/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
         price: 9790,
         sale: true,
-        title: "Ковер",
-        art: "HL-714-IND",
+        title: "Ковер c золотым орнаментом",
+        art: "HL-714-ZOL",
     },
     // {
     //     image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
@@ -52,8 +52,8 @@ const carpetItems = [
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
         sale: true,
-        title: "Ковер",
-        art: "HL-714-IND",
+        title: "Маленький серый ковер",
+        art: "HL-214-GR",
     },
     // {
     //     image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
@@ -66,8 +66,8 @@ const carpetItems = [
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
         price: 790,
         sale: true,
-        title: "Ковер",
-        art: "HL-714-IND",
+        title: "Ковер с геометрическим рисунком",
+        art: "HL-719-KON",
     },
 ]
 
