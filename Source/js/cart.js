@@ -21,10 +21,10 @@ function createBasketHTMLElement(item) {
     // деструктуризация объектов item
     const {image, price, sale, title, art} = item
     // el
-    basketCreateDiv.innerHTML = `<div class="choice-order-wrap">
+    basketCreateDiv.innerHTML = `
+<div class="choice-order-wrap">
     <div class="choice-order">
         <div class="product-card-choice">
-
               <img src="${image}" alt="carpet" class="preview"/>
         </div>
         <div class="about-item">
@@ -55,7 +55,6 @@ function createBasketHTMLElement(item) {
             </div>
         </div>
     </div>
-    
 </div>`
 
     console.log(basketCreateDiv) // создает
@@ -68,14 +67,12 @@ renderBasket(basketElement, basket)
 console.log("card js loaded")
 
 const getSumElem = document.getElementById('sum')
-
 getSumElem.innerHTML = `<div class="choice-order-wrap">
     <div class="sum-left">
         <div class="description-row-cont">
             <div class="description-row">
                 <div class="union">
                     <p class="conclusion">Всего:<span>209 800</span>₽</p></p>
-
                 </div>
             </div>
             <div class="description-row">
@@ -91,9 +88,7 @@ getSumElem.innerHTML = `<div class="choice-order-wrap">
         <p class="description-ru">₽</p>
         <button type="button" class="success">Перейти к оформлению</button>
     </div>
+
 </div>`
 
 
-function getSumItem() {
-
-}

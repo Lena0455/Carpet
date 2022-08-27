@@ -516,7 +516,6 @@ price-white {
 }
 
 .choice-order-wrap {
-
   margin: 0 auto;
   max-width: 1000px;
   padding: 15px 30px 15px 30px;
@@ -525,11 +524,11 @@ price-white {
   //overflow: hidden;
 }
 
-.test {
+
   .choice-order-wrap:nth-child(odd) {
     background: $gainsboro;
   }
-}
+
 
 .choice-order-wrap:nth-child(even) {
   background: $bgcolor;

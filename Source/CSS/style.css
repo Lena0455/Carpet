@@ -428,7 +428,7 @@ price-white {
   padding: 15px 30px 15px 30px;
 }
 
-.test .choice-order-wrap:nth-child(odd) {
+.choice-order-wrap:nth-child(odd) {
   background: #dee2e6;
 }
 
