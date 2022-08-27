@@ -15,12 +15,19 @@
     <script defer src="./Source/js/cart.js"></script>
 
     <style>
-        choice-order-wrap:nth-child(odd) {
-            background: red;
+        /*choice-order-wrap:nth-child(2n) {*/
+        /*    background: red;*/
+        /*}*/
+
+        /*choice-order-wrap {*/
+        /*    background: orange;*/
+        /*}*/
+        #basket > :nth-child(2n) > .choice-order-wrap {
+            background: red !important;
         }
 
-        choice-order-wrap:nth-child(even) {
-            background: orange;
+        #basket > :nth-child(2n-1) .choice-order-wrap {
+            background: orange !important;
         }
     </style>
 </head>
