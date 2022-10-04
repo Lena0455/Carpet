@@ -14,22 +14,29 @@
 
     <script defer src="./Source/js/cart.js"></script>
 
-    <style>
-        choice-order-wrap:nth-child(odd) {
-            background: red;
-        }
 
-        choice-order-wrap:nth-child(even) {
-            background: orange;
+    <style>
+        #basket > div:nth-child(2n) {
+            background-color: #DEE2E6FF;
+        }
+        #basket > div:nth-child(2n+1)  {
+            background-color: #E9ECEFFF;
+            /*Если вы указать #basket div, то стиль будет применен ко всем div внутри #basket, независимо от степени вложенности.
+            А если  #basket > div, то стиль будет применен, только к "прямым" дочерним элементам "первой степени вложенности"*/
+
+        }
+        #sum > div:first-child {
+            /*background-color: #b1d2c1;*/
+            /*background-color: #cbd5d5;*/
+
+            background-color: #ded3f1
         }
     </style>
 </head>
 
 <body>
-<div class="wrapper">
-    <div id="basket">
-
-    </div>
+<div class="wrapper-min">
+    <div id="basket"></div>
     <div id="sum"></div>
 </div>
 

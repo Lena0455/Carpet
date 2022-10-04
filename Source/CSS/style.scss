@@ -11,11 +11,11 @@ $green: #198754;
 $hovgreen: #19875477;
 $acgreen: #176b44;
 $prcolor: #ffffff;
-$bgcolor: #e9ecef;
+$bgcolor: #e9ecef; //1
 $searchgray: #ced4daff;
 $textcolor: #495057;
 $hovcolor: #212529;
-$gainsboro: #dee2e6ff;
+$gainsboro: #dee2e6ff; //2
 $sonic-silver: #adb5bdff;
 
 //$cultured: #f8f9faff;
@@ -79,6 +79,15 @@ body {
   min-height: 100%;
   margin: 0 auto;
   background-color: $bgcolor;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 15px 30px 15px 30px;
+}
+.wrapper-min {
+  overflow: hidden;
+  min-height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   max-width: 1000px;
@@ -427,6 +436,7 @@ span {
 
 span-decoration {
   text-decoration: line-through $link;
+  color: $textcolor;
 }
 
 .price-delivery {
@@ -441,6 +451,8 @@ price-white {
 
 .rub {
   padding: 8px 2px 8px 2px;
+  color: $textcolor;
+
 
   //при появлении скидки
 }
@@ -519,18 +531,16 @@ price-white {
   margin: 0 auto;
   max-width: 1000px;
   padding: 15px 30px 15px 30px;
-  //display: flex;
-  //flex-direction: row;
-  //overflow: hidden;
+
 }
 
-
-  .choice-order-wrap:nth-child(odd) {
+.div7
+  .div#basket:nth-child(odd) {
     background: $gainsboro;
   }
+//
 
-
-.choice-order-wrap:nth-child(even) {
+.div#basket:nth-child(even) {
   background: $bgcolor;
 }
 
@@ -705,9 +715,18 @@ a {
   justify-content: space-between;
 }
 
-//добавляет отступ к цене
-.price:nth-child(3) {
-  margin-left: 5px;
+.price {
+  font-size: 17px;
+  font-weight: 500;
+  color: $textcolor;
+}
+
+//добавляет отступ к цене even*/odd
+.rub:nth-child(2) {
+  margin-right: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  color: $textcolor;
 }
 
 .description-price, {

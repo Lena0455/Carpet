@@ -65,30 +65,63 @@ const basketElement = document.getElementById("basket")
 renderBasket(basketElement, basket)
 
 console.log("card js loaded")
+console.log(basket) // массив корзины
 
+
+// let totalCost; // вся стоимость покупки без скидки
+// let discount; // сумма скидки
+// let discountAndCost; // итоговая сумма с учетом скидки
+
+// функция подсчета суммы всей стоимости покупки без скидки
+// reduce используется для вычисления какого-нибудь единого значения на основе всего массива.
+// arr = [1, 2, 3]
+// let allCost = arr.reduce((sum, current) => sum + current, 0);
+
+let totalCost = basket.reduce((sum, current) => sum + current.price, 0);
+console.log(totalCost)
+
+// carpetItems.forEach(o => console.log(o));
+// carpetItems.forEach(item => console.log(item));
+
+basket.forEach(item => console.log(item.discount)) // ищет все скидки в массиве basket
+
+let percent = basket.find(item => item.discount > 0) // ищет первую скидку в массиве basket
+console.log(percent.discount);
+
+let discount = totalCost / 100 * percent.discount;
+let discountAndCost = totalCost - discount;
+// console.log(discount + '%');
+
+
+// Как должно: price отображается полностью. Если sale true,
+//     то дополнительно отоброжается discount, а price пересчитывается с учетом скидки
+// Как есть: скидка увеличина на 10%
+// Нужно: price разделить на 100 и умножить но процент скидки, далее из price минус discount
+
+
+// отрисовка вывода сумм
 const getSumElem = document.getElementById('sum')
 getSumElem.innerHTML = `<div class="choice-order-wrap">
     <div class="sum-left">
         <div class="description-row-cont">
             <div class="description-row">
                 <div class="union">
-                    <p class="conclusion">Всего:<span>209 800</span>₽</p></p>
+                    <p class="conclusion">Всего:<span>${totalCost}</span>₽</p></p>
                 </div>
             </div>
             <div class="description-row">
                 <div class="union">
-                    <p class="conclusion">Скидка составила:<span>- 9 800</span>₽</p>
+                    <p class="conclusion">Скидка составила:<span>${discount}</span>₽</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="sum">
         <div class="description-sum">Итого:</div>
-        <div class="description-price">200 000</div>
+        <div class="description-price">${discountAndCost}</div>
         <p class="description-ru">₽</p>
         <button type="button" class="success">Перейти к оформлению</button>
     </div>
 
 </div>`
-
 

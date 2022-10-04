@@ -47,6 +47,16 @@ body {
   padding: 15px 30px 15px 30px;
 }
 
+.wrapper-min {
+  overflow: hidden;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  padding: 15px 30px 15px 30px;
+}
+
 .header {
   width: 100%;
   top: 0;
@@ -345,6 +355,7 @@ span {
 
 span-decoration {
   text-decoration: line-through #ff7b00;
+  color: #495057;
 }
 
 .price-delivery {
@@ -359,6 +370,7 @@ price-white {
 
 .rub {
   padding: 8px 2px 8px 2px;
+  color: #495057;
 }
 
 .rub-discount {
@@ -428,11 +440,11 @@ price-white {
   padding: 15px 30px 15px 30px;
 }
 
-.choice-order-wrap:nth-child(odd) {
+.div7 .div#basket:nth-child(odd) {
   background: #dee2e6;
 }
 
-.choice-order-wrap:nth-child(even) {
+.div#basket:nth-child(even) {
   background: #e9ecef;
 }
 
@@ -596,8 +608,17 @@ a {
   justify-content: space-between;
 }
 
-.price:nth-child(3) {
-  margin-left: 5px;
+.price {
+  font-size: 17px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.rub:nth-child(2) {
+  margin-right: 5px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #495057;
 }
 
 .description-price {

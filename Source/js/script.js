@@ -40,6 +40,7 @@ const carpetItems = [
         sale: true,
         title: "Ковер c золотым орнаментом",
         art: "HL-714-ZOL",
+        discount: 10,
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
@@ -47,6 +48,7 @@ const carpetItems = [
         sale: false,
         title: "Ковер выставочный",
         art: "HL-714-IND",
+        discount: 0,
     },
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
@@ -54,6 +56,7 @@ const carpetItems = [
         sale: true,
         title: "Маленький серый ковер",
         art: "HL-214-GR",
+        discount: 0,
     },
     {
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
@@ -61,6 +64,7 @@ const carpetItems = [
         sale: true,
         title: "Белая шкура",
         art: "HL-714-IND",
+        discount: 0,
     },
     {
         image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
@@ -68,8 +72,13 @@ const carpetItems = [
         sale: true,
         title: "Ковер с геометрическим рисунком",
         art: "HL-719-KON",
+        discount: 13,
     },
 ]
+    // [{id: 1}, {id: 2}].find(item => item.id === 1) //{id: 1}
+// let percent = carpetItems.find(item => item.discount === 13) // 13
+// console.log(percent.discount)
+carpetItems.forEach(item => console.log(item));
 
 // Переменные для иконок favorites и cart
 const favoritesIcon = "icon-Vector-4"
@@ -128,7 +137,7 @@ function createCarpetHTMLElement(item) {
 
     // деструктуризация объектов item
     //  const image = item.image;
-    const {image, price, sale, title, art} = item //  объявление новых переменных и присваивание им значений
+    const {image, price, sale, title, art, discount} = item //  объявление новых переменных и присваивание им значений
     //  на основе значений свойств объекта
     // console.log(price);
     // console.log(item);
@@ -153,13 +162,12 @@ function createCarpetHTMLElement(item) {
         </div>
 
         <div class="product-details">
-          <div class="product-price">
-            <span-decoration>${sale}</span-decoration>
-               <span-decoration>
+          <div class="product-price"> 
+            <div class="price">${price}</div><p class="rub">₽</p>
+            <span-decoration>${discount}</span-decoration>
+             <span-decoration>
                  <p class="rub">₽</p>
                </span-decoration>
-            <div class="price">${price}</div>
-            <p class="rub">₽</p>
           </div>
         </div>`
     return carpetCreateDiv;
