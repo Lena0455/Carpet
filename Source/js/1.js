@@ -1,6 +1,6 @@
-const carpetsEl = document.getElementById("items");
+// const carpetsEl = document.getElementById("items");
 
-renderCarpets(carpetsEl, carpetItems);
+// renderCarpets(carpetsEl, carpetItems);
 
 // корзина
 const cart = [];
@@ -64,6 +64,22 @@ const carpetItems = [
         price: 9900
     },
 ]
+
+const cart_ = [];
+
+cart_.push(carpetItems[0], carpetItems[0], carpetItems[1], carpetItems[2]);
+
+console.log(cart_);
+
+// 
+const sum = cart_.reduce((sum, currentElement) => sum += currentElement.price, 0); 
+
+// const sum = cart_.reduce((acc, el) => {
+//     return acc += el.price
+// }, 0); 
+
+console.log("sum: ", sum);
+
 
 // const carpetItems = [];
 // fetchItems() // get items from server

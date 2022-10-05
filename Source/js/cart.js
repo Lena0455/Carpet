@@ -40,6 +40,7 @@ function createBasketHTMLElement(item) {
                     <div class="sum">
                         <div class="description-sum">Цена:</div>
                         <div class="description-price">${price}</div>
+                        <div class="description-discount-price">${getDiscount(item)}</div>
                         <p class="description-ru">₽</p>
                     </div>
 
@@ -111,7 +112,7 @@ getSumElem.innerHTML = `<div class="choice-order-wrap">
             </div>
             <div class="description-row">
                 <div class="union">
-                    <p class="conclusion">Скидка составила:<span>${discount}</span>₽</p>
+                    <p class="conclusion">Скидка составила:<span>${getTotalDiscount()}</span>₽</p>
                 </div>
             </div>
         </div>
@@ -125,3 +126,12 @@ getSumElem.innerHTML = `<div class="choice-order-wrap">
 
 </div>`
 
+function getTotalDiscount() {
+    return basket.reduce((sum, cur) => {
+        sum + (cur.price / 100) * item.discount;
+    }, 0)
+}
+
+function getDiscount(item) {
+    return item.price - (item.price / 100) * item.discount;
+}
