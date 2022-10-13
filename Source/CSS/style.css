@@ -499,7 +499,7 @@ price-white {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 122px;
+  height: 108px;
   margin: 10px 10px 10px 0;
   padding: 10px 10px 10px 0;
 }
@@ -603,6 +603,12 @@ a {
   font-weight: 600;
 }
 
+.full-sum {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 600;
+}
+
 .product-put {
   display: flex;
   justify-content: space-between;
@@ -624,6 +630,11 @@ a {
 .description-price {
   font-weight: 600;
   padding: 0 2px 0 5px;
+  color: #495057;
+}
+
+.description-discount-price {
+  font-weight: 600;
   color: #495057;
 }
 

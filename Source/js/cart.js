@@ -35,12 +35,16 @@ function createBasketHTMLElement(item) {
                 <div class="art-wrap">
                     <p class="art-name">Артикул:</p>
                     <p class="art">${art}</p>
-                </div>
-                <div class="product-put">
-                    <div class="sum">
+                </div>   <div class="full-sum">
                         <div class="description-sum">Цена:</div>
                         <div class="description-price">${price}</div>
-                        <div class="description-discount-price">${getDiscount(item)}</div>
+                        <p class="description-ru">₽</p>
+                    </div>
+                <div class="product-put">
+                 
+                      <div class="full-sum">
+                        <div class="description-sum">Цена со скидкой:</div>
+                        <div class="description-price">${getDiscount(item)}</div>
                         <p class="description-ru">₽</p>
                     </div>
 
@@ -78,26 +82,31 @@ console.log(basket) // массив корзины
 // arr = [1, 2, 3]
 // let allCost = arr.reduce((sum, current) => sum + current, 0);
 
+
+
+// let percent = basket.find(item => item.discount > 0) // ищет первую скидку в массиве basket
+// let percent = basket.reduce((sum, current) => sum + current.discount, 0) // ищет сумму скидок в массиве
+// console.log('сумма процентов ' + `${percent}`+ ' %');
+// let discount = basket.reduce((sum, current) => sum + (current.price / 100) * percent, 0);
+// console.log(discount)
+
 let totalCost = basket.reduce((sum, current) => sum + current.price, 0);
 console.log(totalCost)
 
-// carpetItems.forEach(o => console.log(o));
-// carpetItems.forEach(item => console.log(item));
-
 basket.forEach(item => console.log(item.discount)) // ищет все скидки в массиве basket
+basket.forEach(item => console.log(item.price)) // ищет все цены в массиве basket
 
-let percent = basket.find(item => item.discount > 0) // ищет первую скидку в массиве basket
-console.log(percent.discount);
+// считает скидку для одного item
+function getDiscount(item) {
+    return item.price - (item.price / 100) * item.discount;
+}
 
-let discount = totalCost / 100 * percent.discount;
-let discountAndCost = totalCost - discount;
-// console.log(discount + '%');
-
-
-// Как должно: price отображается полностью. Если sale true,
-//     то дополнительно отоброжается discount, а price пересчитывается с учетом скидки
-// Как есть: скидка увеличина на 10%
-// Нужно: price разделить на 100 и умножить но процент скидки, далее из price минус discount
+// должен считать сумарную скидку, а именно сколько рублей покупатель сэкономил
+function getTotalDiscount() {
+    return basket.reduce((sum, item) => {
+        return sum + (item.price / 100) * item.discount;
+    }, 0)
+}
 
 
 // отрисовка вывода сумм
@@ -119,19 +128,9 @@ getSumElem.innerHTML = `<div class="choice-order-wrap">
     </div>
     <div class="sum">
         <div class="description-sum">Итого:</div>
-        <div class="description-price">${discountAndCost}</div>
+        <div class="description-price">${getTotalDiscount()}</div>
         <p class="description-ru">₽</p>
         <button type="button" class="success">Перейти к оформлению</button>
     </div>
 
 </div>`
-
-function getTotalDiscount() {
-    return basket.reduce((sum, cur) => {
-        sum + (cur.price / 100) * item.discount;
-    }, 0)
-}
-
-function getDiscount(item) {
-    return item.price - (item.price / 100) * item.discount;
-}

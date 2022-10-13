@@ -40,7 +40,7 @@ const carpetItems = [
         sale: true,
         title: "Ковер c золотым орнаментом",
         art: "HL-714-ZOL",
-        discount: 10,
+        discount: 5,
     },
     {
         image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
@@ -72,12 +72,11 @@ const carpetItems = [
         sale: true,
         title: "Ковер с геометрическим рисунком",
         art: "HL-719-KON",
-        discount: 13,
+        discount: 2,
     },
 ]
-    // [{id: 1}, {id: 2}].find(item => item.id === 1) //{id: 1}
-// let percent = carpetItems.find(item => item.discount === 13) // 13
-// console.log(percent.discount)
+// Получить данные из объектов массива возможно только перебором этого массива
+// carpetItems.forEach(o => console.log(o));
 carpetItems.forEach(item => console.log(item));
 
 // Переменные для иконок favorites и cart
