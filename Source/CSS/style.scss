@@ -530,7 +530,7 @@ price-white {
 .choice-order-wrap {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 15px 30px 15px 30px;
+  padding: 20px 30px 20px 30px;
 
 }
 
@@ -562,15 +562,13 @@ price-white {
   height: 200px;
   object-fit: cover;
   gap: 2%;
-
-
 }
-
 .about-item {
   //padding: 0 0 0 30px;
   padding: 0 0 0 50px;
   border-radius: 6px;
   width: 100%;
+
 }
 
 .product-link {
@@ -584,34 +582,13 @@ price-white {
   gap: 2%;
 }
 
-
-.include {
-  justify-content: space-between;
-}
-
-.art-wrap-a {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-bottom: 30px;
-}
-
 .art-wrap {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 108px;
+  height: 40px;
   margin: 10px 10px 10px 0;
   padding: 10px 10px 10px 0;
-}
-
-.art-wrap-b {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: auto;
-  margin: 5px 5px 5px 0;
-  padding: 5px 5px 5px 0;
 }
 
 .art {
@@ -633,7 +610,7 @@ p {
   font-size: 18px;
   margin-bottom: 18px;
   color: $textcolor;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -707,18 +684,21 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  font-weight: 600;
+  //font-weight: 600;
 }
 .full-sum {
   display: flex;
   align-items: flex-end;
-  font-weight: 600;
+  font-weight: 500;
+  padding: 40px 0 0px 0;
 }
+
 
 
 .product-put {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .price {
@@ -739,14 +719,17 @@ a {
   font-weight: 600;
   padding: 0 2px 0 5px;
   color: $textcolor;
+  font-size: 18px;
 }
 .description-discount-price {
   font-weight: 600;
   color: $textcolor;
+  font-size: 18px;
 }
 .description-ru {
   font-weight: 600;
   color: $textcolor;
+  font-size: 18px;
 }
 
 .description-sum {
@@ -795,7 +778,7 @@ a {
 .button-plus {
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 2px;
+  //padding-bottom: 2px;
   color: $prcolor;
   background: $logo;
   width: 30px;
@@ -1089,3 +1072,15 @@ color: $prcolor;
     max-width: 470px;
   }
 }*/
+.low-sum {
+  display: flex;
+  align-items: flex-end;
+  //font-weight: 800;
+  //margin: 10px 10px 10px 0px;
+  //padding: 10px 10px 10px 0px;
+  color: $textcolor;
+  font-size: 18px;
+  justify-content: center;
+
+
+}

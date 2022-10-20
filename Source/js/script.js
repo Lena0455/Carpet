@@ -61,7 +61,7 @@ const carpetItems = [
     {
         image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
         price: 117790,
-        sale: true,
+        sale: false,
         title: "Белая шкура",
         art: "HL-714-IND",
         discount: 0,
