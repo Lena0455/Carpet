@@ -583,10 +583,14 @@ a {
 }
 
 .full-sum {
+  font-weight: 500;
+  padding: 20px 0 0px 0px;
+}
+
+.full-sum-basket {
   display: flex;
   align-items: flex-end;
-  font-weight: 500;
-  padding: 40px 0 0px 0;
+  justify-content: flex-end;
 }
 
 .product-put {
@@ -598,6 +602,12 @@ a {
 .price {
   font-size: 17px;
   font-weight: 500;
+  color: #495057;
+}
+
+.price-discount {
+  font-size: 22px;
+  font-weight: 600;
   color: #495057;
 }
 

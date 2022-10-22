@@ -18,7 +18,7 @@ function createBasketHTMLElement(item) {
     const basketCreateDiv = document.createElement('div');
     console.log("create basket item: ", item)
     // деструктуризация объектов item
-    const {image, price, sale, title, art, discount, basketCreateFullSum} = item // el
+    const {image, price, sale, title, art, discount} = item // el
 
     basketCreateDiv.innerHTML = `
 <div class="choice-order-wrap">
@@ -53,9 +53,8 @@ function createBasketHTMLElement(item) {
                     </div>
                 </div>   
               <div class="full-sum">${item.sale === true ? `
-        <div class="description-sum">Цена без учета скидки:</div>
-        <div class="description-price">${price}</div>
-        <p class="description-ru">₽</p>` : ''}</div>
+                <div class="description-sum"></div>
+                <span-decoration><div class="price-discount">${price + ' ' + '₽'}</div></span-decoration>` : ''}</div>
             </div>
         </div>
     </div>
@@ -63,6 +62,7 @@ function createBasketHTMLElement(item) {
     console.log(basketCreateDiv) // создает
     return basketCreateDiv;
 }
+
 // Сделать проверку. Если скидка на товар есть, то отрисовать если отсутствует оставлять как есть
 /*${item.discount ? discountHTML : "" }
 ${renderDiscount(item)}
