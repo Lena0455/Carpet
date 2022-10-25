@@ -53,7 +53,7 @@ const carpetItems = [
     {
         image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
         price: 17790,
-        sale: true,
+        sale: false,
         title: "Маленький серый ковер",
         art: "HL-214-GR",
         discount: 0,
@@ -79,11 +79,21 @@ const carpetItems = [
 // carpetItems.forEach(o => console.log(o));
 carpetItems.forEach(item => console.log(item));
 
+// Переменные для иконок  flags, cart-f, user
+
 // Переменные для иконок favorites и cart
-const favoritesIcon = "icon-Vector-4"
-const cartIcon = "icon-Vector-5"
-const favoritesIconFilling = "icon-Vector-4-filling"
-const cartIconFilling = "icon-Vector-5-filling"
+const starburst = "icon-starburst"
+const favoritesIcon = "icon-flag"
+const cartIcon = "icon-cart"
+const favoritesIconFilling = "icon-flag-f"
+const cartIconFilling = "icon-cart-f"
+
+// Переменные для иконок car и shop
+const carBig = "car-1"
+const carSmall = "car-2"
+/*    <!-- <button class="some-vector"><i class="${carBig}"></i></button>-->
+    <!-- <button class="some-vector"><i class="${carSmall}"></i></button>-->*/
+
 
 // Представление корзины ввиде массива
 // Сюда по клику попадает объект, осюда же берутся данные для отрисовки карзины пользователя
@@ -117,7 +127,8 @@ function renderCarpets(el, items) {
         // const cartButton = carpetCard.querySelector('img.img-block') // ищет
 
         // функция добавления товара в корзину по клику
-        const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
+        // const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
+        const cartButton = carpetCard.querySelector('i.icon-cart')
         // console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
             // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
@@ -144,30 +155,28 @@ function createCarpetHTMLElement(item) {
     // el
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
-           <div class="icon-positions-favorites">
-             <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
-             <a href="https://learn.javascript.ru/destructuring-assignment"
-               <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
-             </a>
 
-            
-           <div class="icon-positions-cart">
-            <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>  
-<!--              <a href="/cart.html"-->
-                <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
-<!--              </a>-->
-           
-           </div>
-        </div>
+<div class="starburst-icon">${item.sale === true ? `<i class="${starburst}">` : ''}</i>
+    <div class="sale-percent">${item.sale === true ? `${discount + ' ' + '&#x25'}` : ''}</div>
+</div>
+<div class="icon-positions-favorites">
+    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
+    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
 
-        <div class="product-details">
-          <div class="product-price"> 
-            <div class="price">${price}</div><p class="rub">₽</p>
-            <span-decoration>${discount}</span-decoration>
-             <span-decoration>
-                 <p class="rub">₽</p>
-               </span-decoration>
-          </div>
-        </div>`
+    <div class="icon-positions-cart">
+        <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
+
+        <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+    </div>
+</div>
+
+<div class="product-details">
+    <div class="product-price">
+        <div class="price">${price + '' + '₽'}</div>
+        <p class="rub"></p>
+    </div>
+</div>
+`
+
     return carpetCreateDiv;
 }

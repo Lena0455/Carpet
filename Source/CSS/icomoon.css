@@ -1,48 +1,64 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?oq73ip');
-  src:  url('/fonts/icomoon.eot?oq73ip#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?oq73ip') format('truetype'),
-    url('/fonts/icomoon.woff?oq73ip') format('woff'),
-    url('/fonts/icomoon.svg?oq73ip#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  /*font-display: block;*/
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon.eot?6baen6');
+    src: url('/fonts/icomoon.eot?6baen6#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?6baen6') format('truetype'),
+    url('/fonts/icomoon.woff?6baen6') format('woff'),
+    url('/fonts/icomoon.svg?6baen6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    /*font-display: block;*/
 }
 
 [class^="icon-"]::before,
 [class*=" icon-"]::before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /*line-height: 1;*/
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /*line-height: 1;*/
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .item__social {
-  display: flex;
-  /*align-items: center;*/
-  justify-content: center;
-  background: #ded3f1;
-  /*background: #fefdff;*/
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  font-size: 20px;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    background: #ded3f1;
+    /*background: #fefdff;*/
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 20px;
 
 }
 
-.icon-car-1:before {
-  content: "\e900";
+
+.icon-starburst:before {
+    content: "\e909";
+    /*color: #7954a3;*/
+    color: #ded3f1;
+    /*color: #8b66b6;*/
+    font-size: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
+
+/*
+.icon-starburst:before {
+  content: "\e907";
+}
+!*.icon-car-1:before {*!
+!*  content: "\e900";*!
+!*}*!
 .icon-car-2:before {
   content: "\e901";
 }
@@ -66,7 +82,7 @@
 .icon-Vector-5-filling:before {
   content: "\e907";
   color: #7954a3;
-  /*расширение паддинга для попадания по иконке (click) */
+  !*расширение паддинга для попадания по иконке (click) *!
   padding: 6px 6px 6px 6px;
 }
 .icon-Vector-4-all:before {
@@ -76,14 +92,104 @@
   content: "\e909";
   color: #ff4400;
 }
-/*.icon-Vector-4 {*/
+!*.icon-Vector-4 {*!
 
-/*}*/
-/*.icon-Vector-5 {*/
+!*}*!
+!*.icon-Vector-5 {*!
 
-/*}*/
+!*}*!
 .icon-hov {
 }
 .icon-hov:hover {
   transform: scale(1.1);
+}
+*/
+
+.icon-cart:before {
+    content: "\e904";
+    color: #7954a3;
+    /*расширение паддинга для попадания по иконке (click)*/
+    padding: 6px 6px 6px 6px;
+}
+
+.icon-cart-f:before {
+    content: "\e905";
+    color: #7954a3;
+}
+
+.icon-heart:before {
+    content: "\e906";
+    color: #7954a3;
+}
+
+.icon-heart-o:before {
+    content: "\e907";
+    color: #7954a3;
+}
+
+.icon-magnifier:before {
+    content: "\e908";
+}
+
+.icon-discout:before {
+    content: "\e90a";
+}
+
+.icon-user:before {
+    content: "\e90b";
+    color: #495057;
+}
+
+.icon-flags:before {
+    content: "\e90c";
+    color: #495057;
+}
+
+.icon-flag-f:before {
+    content: "\e90d";
+    color: #ff4400;;
+}
+
+.icon-flag:before {
+    content: "\e90e";
+    color: #ff4400;;
+}
+
+.icon-zoomout:before {
+    content: "\e90f";
+}
+
+.icon-zoomin:before {
+    content: "\e910";
+}
+
+.icon-car-1:before {
+    content: "\e900";
+    color: #fefdff;
+}
+
+.icon-car-2:before {
+    content: "\e901";
+    color: #fefdff;
+}
+
+.icon-shop:before {
+    content: "\e902";
+    color: #fefdff;
+}
+
+.icon-Trash-Can:before {
+    content: "\e903";
+}
+
+.icon-square:before {
+    content: "\f0c8";
+}
+
+.icon-home3:before {
+    content: "\e911";
+}
+
+.icon-menu4:before {
+    content: "\e9c0";
 }

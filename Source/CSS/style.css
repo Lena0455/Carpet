@@ -319,6 +319,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
 }
 
 .icon-positions-favorites {
@@ -342,6 +343,12 @@ body {
   right: 0px;
 }
 
+.favorite-t {
+  position: absolute;
+  top: -370px;
+  right: 0px;
+}
+
 .cart {
   position: absolute;
   bottom: 0px;
@@ -356,6 +363,14 @@ span {
 span-decoration {
   text-decoration: line-through #ff7b00;
   color: #495057;
+}
+
+.sale-percent {
+  color: #8b66b6;
+  font-size: 18px;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
 }
 
 .price-delivery {
@@ -822,6 +837,11 @@ a {
 
 .delivery-white {
   filter: brightness(10);
+}
+
+.starburst-icon {
+  position: relative;
+  align-items: center;
 }
 
 .some-vector:hover {

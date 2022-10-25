@@ -398,6 +398,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
 }
 
 .icon-positions-favorites {
@@ -422,6 +423,11 @@ body {
   top: -350px;
   right: 0px;
 }
+.favorite-t {
+  position: absolute;
+  top: -370px;
+  right: 0px;
+}
 
 .cart {
   position: absolute;
@@ -437,6 +443,13 @@ span {
 span-decoration {
   text-decoration: line-through $link;
   color: $textcolor;
+}
+.sale-percent {
+  color: $logo-light;
+  font-size: 18px;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
 }
 
 .price-delivery {
@@ -925,7 +938,7 @@ a {
   font-size: 16px;
   margin: 13px 0 12px 0;
 }
-
+// иконки доставки
 .some-vector {
   width: 60px;
   height: 40px;
@@ -935,7 +948,10 @@ a {
 .delivery-white {
   filter: brightness(10);
 }
-
+.starburst-icon {
+position: relative;
+  align-items: center;
+}
 .some-vector:hover {
   transform: scale(1.1);
 }
