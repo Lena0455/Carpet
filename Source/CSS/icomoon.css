@@ -106,15 +106,11 @@
 .icon-cart:before {
     content: "\e904";
     color: #7954a3;
-    /*расширение паддинга для попадания по иконке (click)*/
-    padding: 6px 6px 6px 6px;
 }
 
 .icon-cart-f:before {
     content: "\e905";
     color: #7954a3;
-    /*расширение паддинга для попадания по иконке (click)*/
-    padding: 6px 6px 6px 6px;
 }
 
 .icon-heart:before {

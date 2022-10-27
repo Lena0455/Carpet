@@ -128,8 +128,9 @@ function renderCarpets(el, items) {
 
         // функция добавления товара в корзину по клику
         // const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
-        const cartButton = carpetCard.querySelector('i.icon-cart')
-        // console.log(cartButton)
+        const cartButton = carpetCard.querySelector('.icon-cart-f')
+
+        console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
             // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
             // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
@@ -160,12 +161,12 @@ function createCarpetHTMLElement(item) {
     <div class="sale-percent">${item.sale === true ? `${discount + ' ' + '&#x25'}` : ''}</div>
 </div>
     <div class="icon-positions-favorites">
-       <button class="icon-flag favorites item__social icon-img icon-hov"></button>
-       <button class="icon-flag-f favorites item__social icon-img icon-hov"></button>
+       <button class="favorites item__social icon-img icon-hov"><i class='icon-flag'></i></button>
+       <button class="favorites item__social icon-img icon-hov"><i class="icon-flag-f"></i></button>
     </div>
     <div class="icon-positions-cart">
-        <button class=" icon-cart cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
-        <button class=" icon-cart-f cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+        <button class="cart item__social icon-img icon-hov"><i class='icon-cart'></i></button>
+        <button class="cart item__social icon-img icon-hov"><i class="icon-cart-f"></i></button>
     </div>
 
 
@@ -181,12 +182,22 @@ function createCarpetHTMLElement(item) {
 }
 
 
-const toggle = document.querySelectorAll('.icon-flag-f');
-console.log(toggle);
+const toggleFlag = document.querySelectorAll('i.icon-flag-f');
+console.log(toggleFlag);
 
-toggle.forEach((el) => {
+toggleFlag.forEach((el) => {
     el.addEventListener('click',(event) => {
         event.currentTarget.classList.toggle('icon-flag')
+        event.stopPropagation()
+    })
+})
+//
+const toggleCart = document.querySelectorAll('i.icon-cart-f');
+console.log(toggleCart);
+
+toggleCart.forEach((el) => {
+    el.addEventListener('click',(event) => {
+        event.currentTarget.classList.toggle('icon-cart')
         event.stopPropagation()
     })
 })
