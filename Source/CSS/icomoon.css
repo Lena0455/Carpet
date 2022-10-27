@@ -43,9 +43,7 @@
 
 .icon-starburst:before {
     content: "\e909";
-    /*color: #7954a3;*/
-    color: #ded3f1;
-    /*color: #8b66b6;*/
+    color: #e8ff2a;
     font-size: 70px;
     position: absolute;
     bottom: 0px;
@@ -115,6 +113,8 @@
 .icon-cart-f:before {
     content: "\e905";
     color: #7954a3;
+    /*расширение паддинга для попадания по иконке (click)*/
+    padding: 6px 6px 6px 6px;
 }
 
 .icon-heart:before {
@@ -137,7 +137,8 @@
 
 .icon-user:before {
     content: "\e90b";
-    color: #495057;
+    color: #ff0090;
+
 }
 
 .icon-flags:before {
@@ -147,13 +148,14 @@
 
 .icon-flag-f:before {
     content: "\e90d";
-    color: #ff4400;;
+    color: #ff4400;
 }
 
 .icon-flag:before {
     content: "\e90e";
-    color: #ff4400;;
+    color: #ff4400;
 }
+
 
 .icon-zoomout:before {
     content: "\e90f";

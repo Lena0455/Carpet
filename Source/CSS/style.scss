@@ -1,6 +1,7 @@
 // Подключение шрифта
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 // $logo: #ff7b00;
+$sun: #e8ff2a;
 $link: #ff7b00;
 $logo-light: #8b66b6;
 $logo-pur: #ded3f1;
@@ -423,12 +424,6 @@ body {
   top: -350px;
   right: 0px;
 }
-.favorite-t {
-  position: absolute;
-  top: -370px;
-  right: 0px;
-}
-
 .cart {
   position: absolute;
   bottom: 0px;
@@ -445,8 +440,9 @@ span-decoration {
   color: $textcolor;
 }
 .sale-percent {
-  color: $logo-light;
+  color: $textcolor;
   font-size: 18px;
+  font-weight: 600;
   position: absolute;
   bottom: 40px;
   left: 20px;
@@ -725,6 +721,12 @@ a {
   font-weight: 500;
   color: $textcolor;
 }
+.price-color-inverse {
+  font-size: 17px;
+  font-weight: 500;
+  color: $prcolor;
+}
+
 .price-discount {
   font-size: 22px;
   font-weight: 600;
@@ -896,6 +898,9 @@ a {
   background: $searchgray;
   border-radius: 6px;
 }
+.delivery {
+  margin-bottom: 30px;
+}
 
 .delivery-row-zero,
 .delivery-row-one,
@@ -939,7 +944,7 @@ a {
   margin: 13px 0 12px 0;
 }
 // иконки доставки
-.some-vector {
+.delivery-icon {
   width: 60px;
   height: 40px;
 }
@@ -952,7 +957,7 @@ a {
 position: relative;
   align-items: center;
 }
-.some-vector:hover {
+.delivery-icon:hover {
   transform: scale(1.1);
 }
 
@@ -1044,6 +1049,19 @@ color: $prcolor;
   background: $logo;
 }
 
+.icon-flag-f {
+
+}
+.icon-flag {
+
+}
+//.icon-cart-f {
+//
+//}
+//.icon-cart {
+//
+//}
+
 .icon__social-list {
   margin-bottom: 10px;
 }
@@ -1073,14 +1091,14 @@ color: $prcolor;
   //filter: invert(70%);
 
 }
+.card-selected img {
+  filter: brightness(10);
+}
 
 .card-selected > p.some-class:last-child > #test {
 
 }
 
-.card-selected img {
-  filter: brightness(10);
-}
 
 
 //.card-selectedDelivery {
@@ -1111,3 +1129,7 @@ color: $prcolor;
 
 
 }
+
+//.toggleFill {
+//  visibility: hidden;
+//}

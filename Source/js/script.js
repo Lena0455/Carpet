@@ -159,16 +159,15 @@ function createCarpetHTMLElement(item) {
 <div class="starburst-icon">${item.sale === true ? `<i class="${starburst}">` : ''}</i>
     <div class="sale-percent">${item.sale === true ? `${discount + ' ' + '&#x25'}` : ''}</div>
 </div>
-<div class="icon-positions-favorites">
-    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
-    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
-
-    <div class="icon-positions-cart">
-        <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
-
-        <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+    <div class="icon-positions-favorites">
+       <button class="icon-flag favorites item__social icon-img icon-hov"></button>
+       <button class="icon-flag-f favorites item__social icon-img icon-hov"></button>
     </div>
-</div>
+    <div class="icon-positions-cart">
+        <button class=" icon-cart cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
+        <button class=" icon-cart-f cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
+    </div>
+
 
 <div class="product-details">
     <div class="product-price">
@@ -180,3 +179,14 @@ function createCarpetHTMLElement(item) {
 
     return carpetCreateDiv;
 }
+
+
+const toggle = document.querySelectorAll('.icon-flag-f');
+console.log(toggle);
+
+toggle.forEach((el) => {
+    el.addEventListener('click',(event) => {
+        event.currentTarget.classList.toggle('icon-flag')
+        event.stopPropagation()
+    })
+})

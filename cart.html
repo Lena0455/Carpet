@@ -43,27 +43,3 @@
 </div>
 
 </body>
-
-<img src="${image}" alt="carpet" class="img-block"/>
-
-<div class=".item__social starburst-icon">${item.sale === true ? `<i class="${starburst}">` : ''}</i>
-    <div class="sale-percent">${item.sale === true ? `${discount + ' ' + '&#x25'}` : ''}</div>
-</div>
-<div class="icon-positions-favorites">
-    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIcon}"></i></button>
-    <button class="favorites item__social icon-img icon-hov"><i class="${favoritesIconFilling}"></i></button>
-
-    <div class="icon-positions-cart">
-        <button class="cart item__social icon-img icon-hov"><i class="${cartIcon}"></i></button>
-
-        <button class="cart item__social icon-img icon-hov"><i class="${cartIconFilling}"></i></button>
-    </div>
-</div>
-
-<div class="product-details">
-    <div class="product-price">
-        <div class="price">${price + '' + '₽'}</div>
-        <p class="rub"></p>
-    </div>
-</div>
-`

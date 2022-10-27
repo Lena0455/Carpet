@@ -148,12 +148,12 @@ getSumElem.innerHTML = `<div class="choice-order-wrap">
 </div>`
 
 
-const flag = true
-
-if (flag) {
-    console.log("1")
-} else {
-    console.log("2")
-}
-
-flag ? console.log("1") : console.log("2");
+// const flag = true
+//
+// if (flag) {
+//     console.log("1")
+// } else {
+//     console.log("2")
+// }
+//
+// flag ? console.log("1") : console.log("2");
