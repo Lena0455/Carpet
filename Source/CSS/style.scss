@@ -943,16 +943,31 @@ a {
   font-size: 16px;
   margin: 13px 0 12px 0;
 }
-// иконки доставки
+ //кнопка с иконкой доставки
 .delivery-icon {
-  width: 60px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+
 }
 
 //изменение цвета иконок доставки
-.delivery-white {
-  filter: brightness(10);
-}
+//.delivery-white {
+//  filter: brightness(10);
+//}
+
+.icon-car-1 {
+
+  }
+
+.icon-car-2 {
+ }
+
+.icon-shop {
+
+  }
+
+
 .starburst-icon {
 position: relative;
   align-items: center;

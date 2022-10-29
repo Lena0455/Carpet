@@ -1,35 +1,5 @@
 console.log(document.documentElement)
 
-// const inverseDelivery = document.querySelector('.')
-// к массиву не добавить слушатель
-// delieveryIconInverted!
-const inverseDelivery = document.querySelectorAll(".delivery-column > div")
-console.log(inverseDelivery)
-
-inverseDelivery.forEach((el) => {
-    el.addEventListener("click", (event) => {
-        event.currentTarget.classList.toggle("card-selected")
-        //classList.toggle //метод-переключатель - у элемента будет то добавляться, то убираться класс
-        // console.log(event.currentTarget); Объект к которому назначен обработчик
-        // toggle(event.currentTarget, "card-selected")
-        event.stopPropagation()
-    })
-})
-
-const inverseDeliveryIcon = document.querySelectorAll('.some-vector')
-console.log(inverseDeliveryIcon);
-
-// array1.forEach(element => console.log(element));
-// inverseDeliveryIcon.forEach(el => console.log(el));
-
-// forEach(callbackFn)
-inverseDeliveryIcon.forEach((elementInverse) => {
-    elementInverse.addEventListener('click', (event) => {
-        event.currentTarget.classList.toggle('delivery-white')
-        event.stopPropagation()
-    })
-})
-
 // Рендер карточек
 // Представление карточек (items)
 const carpetItems = [
@@ -179,10 +149,140 @@ const toggleFlag = document.querySelectorAll('.icon-flag');
 console.log(toggleFlag);
 
 toggleFlag.forEach((el) => {
-    el.addEventListener('click',(event) => {
+    el.addEventListener('click', (event) => {
         event.currentTarget.classList.toggle('icon-flag-f')
         event.stopPropagation()
     })
 })
+// изменение цвета иконок доставки
+// const inverseDelivery = document.querySelector('.')
+// const inverseDelivery = document.querySelectorAll(".delivery-column > div")
+// console.log(inverseDelivery)
+//
+// inverseDelivery.forEach((el) => {
+//     el.addEventListener("click", (event) => {
+//         event.currentTarget.classList.toggle("card-selected")
+//         //classList.toggle //метод-переключатель - у элемента будет то добавляться, то убираться класс
+//         // console.log(event.currentTarget); Объект к которому назначен обработчик
+//         // toggle(event.currentTarget, "card-selected")
+//         event.stopPropagation()
+//     })
+// })
+//
+// const inverseDeliveryIcon = document.querySelectorAll('.some-vector')
+// console.log(inverseDeliveryIcon);
+//
+// // array1.forEach(element => console.log(element));
+// // inverseDeliveryIcon.forEach(el => console.log(el));
+//
+// // forEach(callbackFn)
+// inverseDeliveryIcon.forEach((elementInverse) => {
+//     elementInverse.addEventListener('click', (event) => {
+//         event.currentTarget.classList.toggle('delivery-white')
+//         event.stopPropagation()
+//     })
+// })
+
+// массив элементов данных доставки
+const deliveryItems = [
+    {
+        // title: "Доставка по России",
+        // icon: "/Source/icons/car-1.svg",
+        // price: 1000,
+        // inform: true,
+    },
+]
+console.log(deliveryItems)
+
+
+// Получение element of item
+const deliveryGetEl = document.getElementById('wrapper'); // то куда будет все вкладываться
+console.log(deliveryGetEl);
+
+renderDelivery(deliveryGetEl, deliveryItems)
+
+function renderDelivery (el, items) {
+
+    items.forEach((item) => {
+
+        const renderDiv = createDelivery(item)
+        console.log(renderDiv)
+        el.appendChild(renderDiv);
+    })
+
+}
+
+function createDelivery(item) {
+    const createDeliveryDiv = document.createElement('div');
+    createDeliveryDiv.innerHTML = `<div class="wrapper">
+    <div class="delivery">
+        <div class="delivery-column">
+
+            <div class="delivery-column-one">
+                <div class="delivery-city">Доставка по России
+                </div>
+                <button class="delivery-icon"><i class="icon-car-1"></i></button>
+                <div class="product-price">
+                    <p class="price">1 000</p>
+                    <p class="ruble-symbol">₽</p>
+                </div>
+                <div class="floor">Подъем на один этаж 100₽</div>
+            </div>
+            <div class="delivery-column-two">
+                <div class="delivery-city">Доставка по Петербургу</div>
+                <button class="delivery-icon"><i class="icon-car-2"></i></button>
+                <div class="product-price">
+                    <p class="price">600</p>
+                    <p class="ruble-symbol">₽</p>
+                </div>
+                <div class="floor">Подъем на один этаж 100₽</div>
+            </div>
+            <div class="delivery-column-three">
+                <div class="delivery-city">Самовывоз</div>
+        <button class="delivery-icon"><i class="icon-shop"></i></button>
+                <div class="floor-free">
+                    <p class="product-price">Бесплатно</p>
+                    <a href="" class="universal-link">Показать на карте</a>
+                </div>
+            </div>
+        </div>
+    </div>`
+
+    return createDeliveryDiv
+}
+
+// изменение цвета иконок доставки
+// const inverseDelivery = document.querySelector('.')
+
+
+const inverseDeliveryIcon = document.querySelectorAll('.delivery-icon')
+// console.log(inverseDeliveryIcon);
+
+const inverseDelivery = document.querySelectorAll(".delivery-column > div")
+// console.log(inverseDelivery);
+
+inverseDeliveryIcon.forEach((elementInverse) => {
+    elementInverse.addEventListener('click', (event) => {
+        event.currentTarget.classList.toggle('delivery-white')
+        event.stopPropagation()
+    })
+})
+inverseDelivery.forEach((el) => {
+    el.addEventListener("click", (event) => {
+        event.currentTarget.classList.toggle("card-selected")
+        //classList.toggle //метод-переключатель - у элемента будет то добавляться, то убираться класс
+        // console.log(event.currentTarget); Объект к которому назначен обработчик
+        // toggle(event.currentTarget, "card-selected")
+
+        event.stopPropagation()
+    })
+
+})
+
+
+// array1.forEach(element => console.log(element));
+// inverseDeliveryIcon.forEach(el => console.log(el));
+
+// forEach(callbackFn)
 
 

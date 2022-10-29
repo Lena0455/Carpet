@@ -836,12 +836,9 @@ a {
 }
 
 .delivery-icon {
-  width: 60px;
-  height: 40px;
-}
-
-.delivery-white {
-  filter: brightness(10);
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
 }
 
 .starburst-icon {

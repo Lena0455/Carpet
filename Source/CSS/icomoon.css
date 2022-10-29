@@ -150,11 +150,6 @@
     color: #ff4400;
 }
 
-
-
-
-
-
 .icon-zoomout:before {
     content: "\e90f";
 }
@@ -165,17 +160,20 @@
 
 .icon-car-1:before {
     content: "\e900";
-    color: #fefdff;
+    color: #7954a3;
+font-size: 40px;
 }
 
 .icon-car-2:before {
     content: "\e901";
-    color: #fefdff;
+    color: #7954a3;
+font-size: 40px;
 }
 
 .icon-shop:before {
     content: "\e902";
-    color: #fefdff;
+    color: #7954a3;
+font-size: 40px;
 }
 
 .icon-Trash-Can:before {
