@@ -161,15 +161,14 @@ function createCarpetHTMLElement(item) {
     <div class="sale-percent">${item.sale === true ? `${discount + ' ' + '&#x25'}` : ''}</div>
 </div>
     <div class="icon-positions-favorites">
-       <button class="favorites item__social icon-img icon-hov"><i class='icon-flag'></i></button>
-       <button class="favorites item__social icon-img icon-hov"><i class="icon-flag-f"></i></button>
+      <button class="favorites item__social icon-img icon-hov"><i class="icon-flag-f"></i></button>
+      <button class="favorites item__social icon-img icon-hov"><i class='icon-flag'></i></button>  
     </div>
+    
     <div class="icon-positions-cart">
-        <button class="cart item__social icon-img icon-hov"><i class='icon-cart'></i></button>
-        <button class="cart item__social icon-img icon-hov"><i class="icon-cart-f"></i></button>
+       <button class="cart item__social icon-img icon-hov"><i class="icon-cart-f"></i></button>
+       <button class="cart item__social icon-img icon-hov"><i class='icon-cart'></i></button>  
     </div>
-
-
 <div class="product-details">
     <div class="product-price">
         <div class="price">${price + '' + '₽'}</div>
@@ -182,12 +181,12 @@ function createCarpetHTMLElement(item) {
 }
 
 
-const toggleFlag = document.querySelectorAll('i.icon-flag-f');
+const toggleFlag = document.querySelectorAll('.icon-flag');
 console.log(toggleFlag);
 
 toggleFlag.forEach((el) => {
     el.addEventListener('click',(event) => {
-        event.currentTarget.classList.toggle('icon-flag')
+        event.currentTarget.classList.toggle('icon-flag-f')
         event.stopPropagation()
     })
 })

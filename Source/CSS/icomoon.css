@@ -141,16 +141,18 @@
     content: "\e90c";
     color: #495057;
 }
-
+.icon-flag:before {
+    content: "\e90e";
+    color: #ff4400;
+}
 .icon-flag-f:before {
     content: "\e90d";
     color: #ff4400;
 }
 
-.icon-flag:before {
-    content: "\e90e";
-    color: #ff4400;
-}
+
+
+
 
 
 .icon-zoomout:before {
