@@ -122,18 +122,16 @@ function renderCarpets(el, items) {
         const carpetCard = createCarpetHTMLElement(item);
         console.log(carpetCard)
 
-        // const cartButton = carpetCard.getElementById('cart') // не ищет // carpetCard.getElementById is not a function
-        // const cartButton = carpetCard.querySelector('button.cart') // не ищет
-        // const cartButton = carpetCard.querySelector('img.img-block') // ищет
-
         // функция добавления товара в корзину по клику
-        // const cartButton = carpetCard.querySelector('i.icon-Vector-5-filling')
-        const cartButton = carpetCard.querySelector('.icon-cart-f')
+        const cartButton = carpetCard.querySelector('.icon-cart')
 
         console.log(cartButton)
         cartButton.addEventListener('click', (event) => {
             // carpetCard.getElementsByClassName('.cart').addEventListener('click', (event) => {
             // carpetCard.querySelectorAll('.cart').addEventListener('click', (event) => {
+
+            // переключение иконки тележка
+            event.currentTarget.classList.toggle('icon-cart-f')
             basket.push(item);
             localStorage.setItem("basket", JSON.stringify(basket));
             console.log(basket)
@@ -148,10 +146,7 @@ function createCarpetHTMLElement(item) {
 
     // деструктуризация объектов item
     //  const image = item.image;
-    const {image, price, sale, title, art, discount} = item //  объявление новых переменных и присваивание им значений
-    //  на основе значений свойств объекта
-    // console.log(price);
-    // console.log(item);
+    const {image, price, sale, title, art, discount} = item //  объявление новых переменных и присваивание им значений на основе значений свойств объекта
 
     // el
     carpetCreateDiv.innerHTML = `
@@ -176,11 +171,10 @@ function createCarpetHTMLElement(item) {
     </div>
 </div>
 `
-
     return carpetCreateDiv;
 }
 
-
+// переключение иконки флажок
 const toggleFlag = document.querySelectorAll('.icon-flag');
 console.log(toggleFlag);
 
@@ -190,13 +184,5 @@ toggleFlag.forEach((el) => {
         event.stopPropagation()
     })
 })
-//
-const toggleCart = document.querySelectorAll('i.icon-cart-f');
-console.log(toggleCart);
 
-toggleCart.forEach((el) => {
-    el.addEventListener('click',(event) => {
-        event.currentTarget.classList.toggle('icon-cart')
-        event.stopPropagation()
-    })
-})
+
