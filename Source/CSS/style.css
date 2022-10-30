@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 *,
 *::before,
 ::after {
@@ -389,6 +389,13 @@ price-white {
 
 .ruble-symbol {
   padding: 8px 2px 8px 2px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.universal {
+  color: #495057;
+  font-weight: 400;
 }
 
 .slider {
@@ -819,6 +826,8 @@ a {
 .delivery-city {
   margin: 24px 20px 10px 20px;
   height: 40px;
+  font-weight: 500;
+  color: #495057;
 }
 
 /*.r {
@@ -826,8 +835,10 @@ a {
   //margin-right: none;
 }*/
 .floor {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   margin: 5px 0 20px 0;
+  color: #495057;
 }
 
 .floor-free {
@@ -839,6 +850,14 @@ a {
   width: 80px;
   height: 80px;
   border-radius: 6px;
+}
+
+.invert-text {
+  color: #495057;
+}
+
+.delivery-white {
+  filter: brightness(10);
 }
 
 .starburst-icon {
@@ -856,9 +875,9 @@ a {
 
 .universal-link {
   display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  color: #7954a3;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff7b00;
   text-decoration: none;
   padding: 8px 0;
 }
@@ -867,7 +886,8 @@ a {
 color: $prcolor;
 }*/
 .universal-link:link {
-  color: #7954a3;
+  color: #495057;
+  font-weight: 500;
 }
 
 .universal-link:hover {
@@ -942,8 +962,7 @@ color: $prcolor;
 }
 
 .card-selected {
-  background-color: #7954a3;
-  color: #ffffff;
+  background-color: #ded3f1;
 }
 
 .card-selected img {

@@ -1,5 +1,5 @@
 // Подключение шрифта
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 // $logo: #ff7b00;
 $sun: #e8ff2a;
 $link: #ff7b00;
@@ -472,6 +472,13 @@ price-white {
 
 .ruble-symbol {
   padding: 8px 2px 8px 2px;
+  color: $textcolor;
+  font-weight: 500;
+}
+
+.universal{
+  color: $textcolor;
+  font-weight: 400;
 }
 
 .slider {
@@ -927,6 +934,8 @@ a {
 .delivery-city {
   margin: 24px 20px 10px 20px;
   height: 40px;
+  font-weight: 500;
+  color: $textcolor;
 
 }
 
@@ -935,8 +944,10 @@ a {
   //margin-right: none;
 }*/
 .floor {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   margin: 5px 0 20px 0;
+  color: $textcolor;
 }
 
 .floor-free {
@@ -951,11 +962,16 @@ a {
 
 }
 
-//изменение цвета иконок доставки
-//.delivery-white {
-//  filter: brightness(10);
-//}
 
+
+// изменение цвета техта доставки
+.invert-text {
+  color: $textcolor;
+}
+//изменение цвета
+.delivery-white {
+filter: brightness(10);
+}
 .icon-car-1 {
 
   }
@@ -982,9 +998,9 @@ position: relative;
 
 .universal-link {
   display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  color: $logo;
+  font-size: 18px;
+  font-weight: 600;
+  color: $link;
   text-decoration: none;
   padding: 8px 0;
 
@@ -995,7 +1011,9 @@ color: $prcolor;
 }*/
 
 .universal-link:link {
-  color: $logo;
+  //color: $logo;
+  color: $textcolor;
+  font-weight: 500;
 }
 
 // .universal-link:visited {
@@ -1100,10 +1118,7 @@ color: $prcolor;
 }
 
 .card-selected {
-  background-color: $logo;
-  color: $prcolor;
-  //filter: hue-rotate(1);
-  //filter: invert(70%);
+  background-color: $logo-pur;
 
 }
 .card-selected img {
