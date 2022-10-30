@@ -1,5 +1,6 @@
 console.log(document.documentElement)
 
+
 // Рендер карточек
 // Представление карточек (items)
 const carpetItems = [
@@ -48,20 +49,6 @@ const carpetItems = [
 // Получить данные из объектов массива возможно только перебором этого массива
 // carpetItems.forEach(o => console.log(o));
 carpetItems.forEach(item => console.log(item));
-
-// Переменные для иконок  flags, cart-f, user
-// Переменные для иконок favorites и cart
-const starburst = "icon-starburst"
-const favoritesIcon = "icon-flag"
-const cartIcon = "icon-cart"
-const favoritesIconFilling = "icon-flag-f"
-const cartIconFilling = "icon-cart-f"
-// Переменные для иконок car и shop
-const carBig = "car-1"
-const carSmall = "car-2"
-/*    <!-- <button class="some-vector"><i class="${carBig}"></i></button>-->
-    <!-- <button class="some-vector"><i class="${carSmall}"></i></button>-->*/
-
 
 // Представление корзины ввиде массива
 // Сюда по клику попадает объект, осюда же берутся данные для отрисовки карзины пользователя
@@ -115,7 +102,7 @@ function createCarpetHTMLElement(item) {
     // деструктуризация объектов item
     //  const image = item.image;
     const {image, price, sale, title, art, discount} = item //  объявление новых переменных и присваивание им значений на основе значений свойств объекта
-
+    const starburst = "icon-starburst"
     // el
     carpetCreateDiv.innerHTML = `
         <img src="${image}" alt="carpet" class="img-block"/>
@@ -249,12 +236,7 @@ function createDelivery(item) {
     return createDeliveryDiv
 }
 
-
-// const inverseDelivery = document.querySelector('.')
-
 // изменение цвета иконок доставки
-
-
 const inverseDelivery = document.querySelectorAll(".delivery-column > div")
 inverseDelivery.forEach((el) => {
     el.addEventListener("click", (event) => {
@@ -266,6 +248,7 @@ inverseDelivery.forEach((el) => {
     })
 })
 
+// const inverseDelivery = document.querySelector('.')
 // array1.forEach(element => console.log(element));
 // forEach(callbackFn)
 
